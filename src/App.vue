@@ -1,12 +1,11 @@
 <template>
   <div id="app">
     <v-app> 
-     <v-toolbar color="cyan" dark app clipped-left><!-- <v-toolbar-side-icon @click.stop="drawer = !drawer">
-    --><div id="nav">
+     <v-toolbar color="cyan" dark app clipped-left>
+      <div id="nav">
      <router-link to="/">Home</router-link> &nbsp;&nbsp;
       <router-link to="/about">About</router-link> 
     </div>
-   <!--  </v-toolbar-side-icon> -->
     </v-toolbar>
     <router-view/>
     </v-app>
@@ -32,7 +31,7 @@ export default {
 }
 #nav {
   padding: 30px;
-  margin-left: 3%;
+
 }
 
 #nav a {
