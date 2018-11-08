@@ -1,12 +1,12 @@
 <template>
   <div id="app">
     <v-app> 
-     <v-toolbar color="cyan" dark app clipped-left><v-toolbar-side-icon @click.stop="drawer = !drawer">
-    <div id="nav">
+     <v-toolbar color="cyan" dark app clipped-left><!-- <v-toolbar-side-icon @click.stop="drawer = !drawer">
+    --><div id="nav">
      <router-link to="/">Home</router-link> &nbsp;&nbsp;
       <router-link to="/about">About</router-link> 
     </div>
-    </v-toolbar-side-icon>
+   <!--  </v-toolbar-side-icon> -->
     </v-toolbar>
     <router-view/>
     </v-app>
@@ -37,13 +37,13 @@ export default {
 
 #nav a {
   font-weight: bold;
-  color: #2c3e50;
+  color: #ffffff;
   text-decoration: none;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
-  padding-left: 175px;
+  color: #ffffff;
+  padding-left: 5%;
   text-decoration: none;
 }
 </style>
