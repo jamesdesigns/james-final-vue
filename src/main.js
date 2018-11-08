@@ -4,9 +4,9 @@ import './plugins/vuetify'
 import App from "./App.vue";
 import router from "./router";
 import store from "./store";
-// import Vuelidate from 'vuelidate';
+import Vuelidate from 'vuelidate';
 
-// Vue.use(Vuelidate)
+Vue.use(Vuelidate)
 
 Vue.directive('box-shadow', {
   bind(el, binding) {

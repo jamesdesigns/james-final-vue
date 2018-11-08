@@ -3,8 +3,9 @@
     <v-app> 
      <v-toolbar color="cyan" dark app clipped-left>
       <div id="nav">
-     <router-link to="/">Home</router-link> &nbsp;&nbsp;
-      <router-link to="/about">About</router-link> 
+     <router-link to="/">Home</router-link> |
+      <router-link to="/about">About</router-link> |
+      <router-link to="/summary">Summary</router-link> 
     </div>
     </v-toolbar>
     <router-view/>
@@ -31,7 +32,6 @@ export default {
 }
 #nav {
   padding: 30px;
-
 }
 
 #nav a {
