@@ -5,7 +5,6 @@
       Now you have the opportunity to choose who you want to work for you.<br>
       Just select any member that best fits your team and get approved in minutes.
     </p>
-    
   </div>
 </template>
 
@@ -17,7 +16,6 @@ export default {
   }
 };
 </script>
-
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h3 {
