@@ -2,24 +2,18 @@
   <div id="app">
     <v-app> 
      <v-toolbar color="cyan" dark app clipped-left>
-      <div id="nav">
-     <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/summary">Summary</router-link> 
-    </div>
+        <div id="nav">
+          <router-link to="/">Home</router-link> |
+          <router-link to="/about">About</router-link> |
+          <router-link to="/summary">Summary</router-link> 
+      </div>
     </v-toolbar>
     <router-view/>
     </v-app>
   </div>
 </template>
 <script>
-export default {
-  data() {
-    return {
-      drawer: null,
-    }
-  }
-}
+
 </script>
 
 <style>

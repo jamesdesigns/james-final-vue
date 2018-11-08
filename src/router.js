@@ -23,7 +23,7 @@ export default new Router({
         import(/* webpackChunkName: "about" */ "./views/About.vue")
     },
     {
-      path: "/",
+      path: "/summary",
       name: "summary",
       component: Summary
     }
