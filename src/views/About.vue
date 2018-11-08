@@ -24,15 +24,15 @@
   </div>
 </template>
 <script>
-import { profile } from '../assets/profile.js'
+import { profiles } from '../assets/profiles'
 
 export default {
   data: function() {
     return {
-      allProfiles: profile
-    }
+      allProfiles: profiles
+    };
   }
-}
+};
 </script>
 <style>
 </style>

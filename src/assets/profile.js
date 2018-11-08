@@ -1,5 +1,5 @@
 export default {
-{
+
 "name":"Héctor",
 "surname":"Márquez",
 "gender":"male",
@@ -12,5 +12,4 @@ export default {
 "password":"Márquez85~^",
 "credit_card":{"expiration":"9\/19","number":"4497-1302-3331-6900","pin":5071,"security":300},
 "photo":"https:\/\/uinames.com\/api\/photos\/male\/20.jpg"
-}
 }
