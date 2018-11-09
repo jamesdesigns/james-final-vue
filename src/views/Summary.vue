@@ -1,11 +1,12 @@
 <template>
 <div>
-<h1>Hello World!</h1>
+
 <p>This is the third page.</p>
 <p>This is the third page.</p>
 <p>This is the third page.</p>
 <p>This is the third page.</p>
 <p>This is the third page.</p>
+<h1>Summary Page</h1>
 </div>
 </template>
 <script>
@@ -13,6 +14,7 @@
 <style scoped>
 h1 {
     font-size: 300%;
+    color: red;
 }
 
 </style>

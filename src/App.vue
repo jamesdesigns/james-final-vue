@@ -1,17 +1,14 @@
 <template>
   <div id="app">
-    <main-header></main-header>
-    <v-app> 
-     <v-toolbar color="cyan" dark app clipped-left>
-        <div id="nav">
-          <router-link to="/">Home</router-link> |
-          <router-link to="/about">About</router-link> |
-          <router-link to="/summary">Summary</router-link> 
-      </div>
-    </v-toolbar>
-    <router-view/>
-    </v-app>
-
+      <main-header>
+    </main-header>
+  <h1>Built-in Directives</h1>
+    <p v-text="'Some Text'"</p>
+    <p v-html="'<strong>Some strong text</strong>'"></p>
+    <br>
+    <br>
+    <h1>Custom Directives</h1>
+    <p v-highlight:background.delayed="'gray'">Color this</p>
   </div>
 </template>
 <script>
@@ -49,4 +46,6 @@ export default {
   padding-left: 5%;
   text-decoration: none;
 }
+
+
 </style>
