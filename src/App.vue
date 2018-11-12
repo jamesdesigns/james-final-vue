@@ -43,7 +43,6 @@ export default {
 
 #nav a.router-link-exact-active {
   color: #ffffff;
-  padding-left: 5%;
   text-decoration: none;
 }
 
