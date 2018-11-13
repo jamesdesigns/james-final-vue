@@ -1,7 +1,7 @@
 <template>
 <div>
 <v-container>
-<h1>Member Names</h1>
+<h1>Member Profiles</h1>
 
 <!-- Original example -->
 <!-- <div>{{ courses.foo }}</div> -->
@@ -14,12 +14,14 @@
 
 <v-card-title primary-title>
           <div>
-            <h3 class="headline mb-0">{{ info.data.name }}</h3>
+            
             <ul>
+                <li><img :src="info.data.photo" alt="image" /></li>
+                <li class="headline mb-0">{{ info.data.name }}</li>
                 <li>Age: {{ info.data.age }}</li>
                 <li>Gender: {{ info.data.gender }}</li>
                 <li>Email: {{ info.data.email }}</li>
-                <li>Photo: <img :src="info.data.photo" alt="image" /></li>
+               
             </ul>
            
           </div>
@@ -29,7 +31,7 @@
 </v-card>
     </v-flex>
     </v-layout>
-    <v-btn @click="getCourses">Click to Accept</v-btn>
+    <v-btn @click="getCourses">Add Member</v-btn>
  </v-container>
 </div>
    
@@ -75,8 +77,21 @@ ul li {
     list-style-type: none;
     text-align:left;
 }
+
+li {
+    margin-left:50%;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
 h3 {
     text-align: left;
     margin-left:10%;
+}
+
+img {
+    border-radius: 50%;
+    margin-left: 50%;
 }
 </style>

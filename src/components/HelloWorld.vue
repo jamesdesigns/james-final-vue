@@ -2,11 +2,11 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
-      Now you have the opportunity to choose who you want to work with.<br>
-      Just select any team member that best fits your team and get it approved in minutes.
+      You now have the opportunity to choose who you want on your new team. Create two options. Your first option may or may not be rejected from the people you selected.
+      Just select any team member that best fits your ideal team and get it approved from each member in minutes.
     </p>
 
-      <div v-drag-and-drop:options="options" class="drag-wrapper">
+      <div v-drag-and-drop:options="options" class="drag-wrapper">    
   <ul>
     <li>Member 1</li>
     <li>Member 2</li>
@@ -59,6 +59,7 @@ a {
 .drag-wrapper {
   display: flex;
   justify-content: center;
+  margin-top:2%;
 }
 
 ul {
@@ -72,8 +73,8 @@ ul {
   overflow-y:auto;
   border:2px solid #888;
   border-radius:0.2em;
-  background:#8adccc;
-  color:#555;
+  background:#ffad33;
+  color:#000;
   margin-right: 20px;
 }
 
@@ -131,4 +132,5 @@ li[aria-grabbed="true"]
     animation-duration: 0.5s;
     animation-name: nodeInserted;
 }
+
 </style>
