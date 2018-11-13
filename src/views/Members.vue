@@ -1,13 +1,13 @@
 <template>
 <div>
 <v-container>
-<h1>Accessing Names</h1>
+<h1>Member Names</h1>
 <v-btn @click="getCourses">Click to View</v-btn>
 <!-- Original example -->
 <!-- <div>{{ courses.foo }}</div> -->
 
 <!-- New example -->
-<div>{{ courses }}</div>
+<div>{{ info }}</div>
  </v-container>
     </div>
    
@@ -26,7 +26,7 @@ export default {
     // New example
     mounted() {
         axios
-            .get('https://api.coindesk.com/v1/bpi/currentprice.json')
+            .get('https://uinames.com/api/?ext')
             .then(response => (this.info = response))
     },
    
@@ -34,7 +34,7 @@ export default {
         getCourses() {
             return axios
             //.get('https://randomuser.me/api')
-            .get('https://uinames.com/api/')
+            .get('https://uinames.com/api/?ext')
             .then(function(response) {
                 // console.log(response.data.results[0].name)
                 this.courses.push(response.data.results[0].name)

@@ -1,9 +1,9 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-import Summary from "./views/Summary.vue";
-import Remote from "./views/Remote";
+import Members from "./views/Members";
 import Login from "./views/Login";
+
 
 
 Vue.use(Router);
@@ -25,14 +25,9 @@ export default new Router({
         import(/* webpackChunkName: "about" */ "./views/About.vue")
     },
     {
-      path: "/summary",
-      name: "summary",
-      component: Summary
-    },
-    {
-      path: "/remote",
-      name: "remote",
-      component: Remote
+      path: "/members",
+      name: "members",
+      component: Members
     },
     {
       path: "/login",

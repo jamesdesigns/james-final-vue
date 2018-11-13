@@ -1,7 +1,6 @@
 <template>
   <div id="app">
-      <main-header>
-    </main-header>
+      <main-header></main-header>
   <h1>Built-in Directives</h1>
     <p v-text="'Some Text'"</p>
     <p v-html="'<strong>Some strong text</strong>'"></p>
