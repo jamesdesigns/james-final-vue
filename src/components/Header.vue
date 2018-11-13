@@ -6,7 +6,7 @@
         <div id="nav">
           <router-link class="menu" to="/">Home</router-link>
           <router-link class="menu" to="/about">About</router-link>
-          <router-link class="menu" to="/remote">Members</router-link>
+          <router-link class="menu" to="/members">Members</router-link>
           <router-link class="menu" to="/login">Login</router-link>
       </div>
       

@@ -5,8 +5,10 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import Vuelidate from 'vuelidate';
+import VueDraggable from 'vue-draggable';
 
 Vue.use(Vuelidate)
+Vue.use(VueDraggable)
 
 Vue.directive('highlight', {
   bind(el, binding, vnode) {

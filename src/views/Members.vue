@@ -2,14 +2,36 @@
 <div>
 <v-container>
 <h1>Member Names</h1>
-<v-btn @click="getCourses">Click to View</v-btn>
+
 <!-- Original example -->
 <!-- <div>{{ courses.foo }}</div> -->
 
 <!-- New example -->
-<div>{{ info }}</div>
+<v-layout>
+    <v-flex xs12 sm6 offset-sm3>
+<v-card>
+
+
+<v-card-title primary-title>
+          <div>
+            <h3 class="headline mb-0">{{ info.data.name }}</h3>
+            <ul>
+                <li>Age: {{ info.data.age }}</li>
+                <li>Gender: {{ info.data.gender }}</li>
+                <li>Email: {{ info.data.email }}</li>
+                <li>Photo: <img :src="info.data.photo" alt="image" /></li>
+            </ul>
+           
+          </div>
+        </v-card-title>
+
+
+</v-card>
+    </v-flex>
+    </v-layout>
+    <v-btn @click="getCourses">Click to Accept</v-btn>
  </v-container>
-    </div>
+</div>
    
 </template>
 <script>
@@ -48,3 +70,13 @@ export default {
 }
 
 </script>
+<style>
+ul li {
+    list-style-type: none;
+    text-align:left;
+}
+h3 {
+    text-align: left;
+    margin-left:10%;
+}
+</style>

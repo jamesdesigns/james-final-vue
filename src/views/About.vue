@@ -1,6 +1,7 @@
 <template>
   <div class="about">
-    <h1>Individual Talent</h1>
+    <h1>How TeamUp Works</h1>
+    <p>Select who you want to join your team. Select all the members that might benefit you and your new team.</p>
   </div>
 </template>
 <script>

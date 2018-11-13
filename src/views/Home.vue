@@ -2,7 +2,7 @@
   <div class="home">
    <!-- Place a New logo here for the Home Page --> 
    <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
-    <HelloWorld msg="Choose a Team"/>
+    <HelloWorld msg="Choose your Team"/>
   </div>
 </template>
 
