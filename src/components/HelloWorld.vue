@@ -2,11 +2,13 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <p>
-      You now have the opportunity to choose who you want on your new team. Create two options. Your first option may or may not be rejected from the people you selected.
+      You now have the opportunity to choose who you want on your new team. Create two team options. Your first option may or may not be approved from the people you select.
       Just select any team member that best fits your ideal team and get it approved from each member in minutes.
     </p>
-
-      <div v-drag-and-drop:options="options" class="drag-wrapper">    
+    <br>
+<h3>Drag and Drop</h3>   
+      <div v-drag-and-drop:options="options" class="drag-wrapper">   
+      
   <ul>
     <li>Member 1</li>
     <li>Member 2</li>
@@ -24,6 +26,7 @@
       <li>Member 12</li>
   </ul>
 </div>
+<v-btn @click="getCourses">Send Request</v-btn>
   </div>
 </template>
 
@@ -46,7 +49,8 @@ p {
   margin:0 auto;
 }
 h3 {
-  margin: 40px 0 0;
+  text-align: center;
+  margin-left:-2%;
 }
 ul {
   list-style-type: none;

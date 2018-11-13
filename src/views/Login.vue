@@ -25,7 +25,7 @@
     <v-checkbox
       v-model="checkbox"
       :rules="[v => !!v || 'You must agree to continue!']"
-      label="Do you agree?"
+      label="Do you want to join a team?"
       required
     ></v-checkbox>
 
