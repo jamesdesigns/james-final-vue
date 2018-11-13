@@ -1,12 +1,6 @@
 <template>
   <div class="about">
-    <h1>About Title</h1>
-    <p>This is a sentence.</p>
-    <p>This is a sentence.</p>
-    <p>This is a sentence.</p>
-    <p>This is a sentence.</p>
-    <p>This is a sentence.</p>
-    <h1>About Title</h1>
+    <h1>Individual Talent</h1>
   </div>
 </template>
 <script>
@@ -14,7 +8,8 @@
 </script>
 <style>
 h1 {
-  font-size: 300%;
-  color: red;
+  font-size: 200%;
+  color: #000;
+  margin-top: 10%;
 }
 </style>

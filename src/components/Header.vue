@@ -1,11 +1,14 @@
 <template>
 <div>
     <v-app> 
-       <v-toolbar color="cyan" dark app clipped-left>
+       <v-toolbar color="blue" dark app clipped-left>
+           <v-toolbar-title>SelectTalent</v-toolbar-title>
         <div id="nav">
-          <router-link to="/">Home</router-link> |
-          <router-link to="/about">About</router-link> |
-          <router-link to="/summary">Summary</router-link> 
+          <router-link class="menu" to="/">Home</router-link>
+          <router-link class="menu" to="/about">About</router-link>
+          <router-link class="menu" to="/summary">Summary</router-link> 
+          <router-link class="menu" to="/remote">Remote</router-link>
+          <router-link class="menu" to="/login">Login / Sign Up</router-link>
       </div>
       
         </v-toolbar>
@@ -24,5 +27,8 @@ export default {
 h1 {
     font-size:500%;
     color: red;
+}
+.menu {
+    padding-right: 20px;
 }
 </style>

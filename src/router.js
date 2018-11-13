@@ -2,6 +2,8 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import Summary from "./views/Summary.vue";
+import Remote from "./views/Remote";
+import Login from "./views/Login";
 
 
 Vue.use(Router);
@@ -26,6 +28,17 @@ export default new Router({
       path: "/summary",
       name: "summary",
       component: Summary
+    },
+    {
+      path: "/remote",
+      name: "remote",
+      component: Remote
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: Login
     }
+
   ]
 });

@@ -1,6 +1,7 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png">
+   <!-- Place a New logo here for the Home Page --> 
+   <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
     <HelloWorld msg="Choose a Team"/>
   </div>
 </template>
@@ -16,3 +17,8 @@ export default {
   }
 };
 </script>
+<style>
+.home {
+  margin-top:5%;
+}
+</style>
