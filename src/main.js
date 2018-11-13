@@ -11,7 +11,7 @@ Vue.use(Vuelidate)
 Vue.use(VueDraggable)
 
 Vue.directive('highlight', {
-  bind(el, binding, vnode) {
+  bind(el, binding) {
     // el.style.backgroundColor = 'gray';
     // el.style.backgroundColor = binding.value;
     var delay = 0;
