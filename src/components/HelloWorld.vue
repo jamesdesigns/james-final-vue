@@ -38,9 +38,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1 {
-  margin-top: 5%;
+  margin-top:5%;
 }
-
+p {
+  width: 50%;
+  text-align:left;
+  margin:0 auto;
+}
 h3 {
   margin: 40px 0 0;
 }

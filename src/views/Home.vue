@@ -1,7 +1,7 @@
 <template>
   <div class="home">
    <!-- Place a New logo here for the Home Page --> 
-   <!-- <img alt="Vue logo" src="../assets/logo.png"> -->
+   <!-- <img alt="TeamUp logo" src="../assets/logo.png"> -->
     <HelloWorld msg="Choose your Team"/>
   </div>
 </template>

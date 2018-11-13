@@ -44,7 +44,7 @@
 </template>
 <script>
 </script>
-<style>
+<style scoped>
 h1 {
     margin-top:10%;
 }

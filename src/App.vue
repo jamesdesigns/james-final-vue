@@ -1,7 +1,7 @@
 <template>
   <div id="app">
       <main-header></main-header>
-    <p v-highlight:background.delayed="'gray'">Color this</p>
+   <!-- <p v-highlight:background.delayed="'gray'">TeamUp</p> -->
   </div>
 </template>
 <script>
@@ -38,6 +38,4 @@ export default {
   color: #ffffff;
   text-decoration: none;
 }
-
-
 </style>
