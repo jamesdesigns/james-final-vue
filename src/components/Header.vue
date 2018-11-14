@@ -2,7 +2,7 @@
 <div>
     <v-app> 
        <v-toolbar color="blue" dark app clipped-left>
-           <v-toolbar-title>TeamUp<img src="../assets/logo-icon.png" alt="icon" /></v-toolbar-title>
+           <v-toolbar-title class="font-weight-black">TeamUp<img src="../assets/logo-icon.png" alt="icon" /></v-toolbar-title>
         <div id="nav">
           <router-link class="menu" to="/">Home</router-link>
           <router-link class="menu" to="/members">Members</router-link>

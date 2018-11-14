@@ -27,7 +27,7 @@
   </ul>
 </div>
 <br>
-<v-btn color="info" @click="getCourses">Send Request</v-btn>
+<v-btn color="info" @click="getCourses">APPROVE</v-btn>
   </div>
 </template>
 

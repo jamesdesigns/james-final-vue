@@ -28,31 +28,6 @@
   </v-layout>
   </div>
  
-<!--
-<div>
-<v-container>
-<h1>Member Profiles</h1>
-<v-layout>
-    <v-flex xs12 sm6 offset-sm3>
-<v-card>
-<v-card-title primary-title>
-          <div>
-            <ul>
-                <li><img :src="info.data.photo" alt="image" /></li>
-                <li class="headline mb-0">{{ info.data.name }}</li>
-                <li>Age: {{ info.data.age }}</li>
-                <li>Gender: {{ info.data.gender }}</li>
-                <li>Email: {{ info.data.email }}</li>
-            </ul>
-          </div>
-        </v-card-title>
-</v-card>
-    </v-flex>
-    </v-layout>
-    <v-btn @click="getCourses">Add Member</v-btn>
- </v-container>
-</div>
-   -->
 </template>
 <script>
 export default {
