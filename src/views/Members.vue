@@ -1,4 +1,34 @@
 <template>
+
+<div class="container">
+    <v-layout>
+    <v-flex xs12 sm6 offset-sm3>
+      <v-card width="300px">
+       <v-img
+          height="300px"  
+          :src="info.data.photo" alt="image" />
+        
+        </v-img>
+        <v-card-title>
+         
+            <ul>
+                <!--<li><img :src="info.data.photo" alt="image" /></li>-->
+                <li class="headline mb-0">{{ info.data.name }}</li>
+                <li>Age: {{ info.data.age }}</li>
+                <li>Gender: {{ info.data.gender }}</li>
+                <li>Email: {{ info.data.email }}</li>
+            </ul>
+          
+        </v-card-title>
+        <v-card-actions class="center-align">
+            <v-btn color="info" @click="getCourses">REQUEST MEMBER</v-btn>       
+        </v-card-actions>
+      </v-card>
+    </v-flex>
+  </v-layout>
+  </div>
+ 
+<!--
 <div>
 <v-container>
 <h1>Member Profiles</h1>
@@ -22,7 +52,7 @@
     <v-btn @click="getCourses">Add Member</v-btn>
  </v-container>
 </div>
-   
+   -->
 </template>
 <script>
 export default {
@@ -57,22 +87,34 @@ export default {
 }
 </script>
 <style>
+ul {
+
+}
 ul li {
     list-style-type: none;
     text-align:left;
 }
 
 li {
-    margin-left:50%;
+
 }
 
-h3 {
+h2 {
     text-align: left;
     margin-left:10%;
 }
 
-img {
-    border-radius: 50%;
-    margin-left: 15%;
+.container {
+    margin-top: 100px;
 }
+
+
+img {
+    margin-left: 5px;
+}
+.center-align {
+    margin-left:20%;
+    padding-bottom: 30px;
+}
+
 </style>

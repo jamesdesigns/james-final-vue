@@ -3,7 +3,7 @@
     <h1>{{ msg }}</h1>
     <p>
       You now have the opportunity to choose who you want on your new team. Create two team options. Your first option may or may not be approved from the people you select.
-      Just select any team member that best fits your ideal team and get it approved from each member in minutes.
+      Just select any team member that best fits your ideal team and get an approval within minutes.
     </p>
     <br>
 <h3>Drag and Drop</h3>   
@@ -26,7 +26,8 @@
       <li>Member 12</li>
   </ul>
 </div>
-<v-btn @click="getCourses">Send Request</v-btn>
+<br>
+<v-btn color="info" @click="getCourses">Send Request</v-btn>
   </div>
 </template>
 
