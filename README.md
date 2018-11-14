@@ -1,5 +1,8 @@
 # james-final-vue
 
+# View a sample of this application:
+https://inspiring-bassi-b7efe0.netlify.com/#/
+
 ## Project setup
 ```
 npm install
