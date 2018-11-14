@@ -17,7 +17,7 @@
     <li>Member 5</li>
     <li>Member 6</li>
   </ul>
-  <ul>
+  <ul> 
       <li>Member 7</li>
       <li>Member 8</li>
       <li>Member 9</li>
@@ -82,7 +82,7 @@ ul {
   overflow-y:auto;
   border:2px solid #888;
   border-radius:0.2em;
-  background:#ffad33;
+  background:#ffff66;
   color:#000;
   margin-right: 20px;
 }

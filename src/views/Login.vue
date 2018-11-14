@@ -5,7 +5,7 @@
     <v-text-field
       v-model="username"
       :rules="nameRules"
-      :counter="10"
+      :counter="20"
       label="Username"
       required
     ></v-text-field>
@@ -44,7 +44,7 @@
       name: '',
       nameRules: [
         v => !!v || 'Name is required',
-        v => (v && v.length <= 10) || 'Name must be less than 10 characters'
+        v => (v && v.length <= 20) || 'Name must be less than 10 characters'
       ],
       email: '',
       emailRules: [
@@ -53,8 +53,10 @@
       ],
       select: null,
       items: [
-        'Games',
         'Collaboration',
+        'Games',
+        'Production',
+        'Study',
         'UX Design',
         'Web Development',
         'Other'
