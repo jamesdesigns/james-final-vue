@@ -27,32 +27,67 @@
     </v-flex>
   </v-layout>
   </div>
+
+
+
+
+  
  
 </template>
 <script>
+// This is newly added as of Nov 14 in class. ( BELOW )
+import axios from 'axios'
+
 export default {
     data() {
         return {
             // Original example
+            // This is my New Attempt
             // courses: []
 
             // New example
-            info: null
+            // info: null
+            info: []
     }
     },
     // New example
     mounted() {
         axios
-            .get('https://uinames.com/api/?ext')
+            .get('https://uinames.com/api/?amount=25')
             .then(response => (this.info = response))
     },
-   
+   /*
+   // This is ES6 way of doing things
+   // This basically is how to get a massive object into an array
+
+   methods: {
+    getCourses() {
+        // axios.get('https://sweltering-fire-2420.firebaseio.com/courses.json')
+        axios.get('https://uinames.com/api/?ext')
+        .then(response => { // wow, diff between es5 function and arrow
+        console.log(response)
+        const allCoursesObj = response.data
+        // Built in JavaScript root - ask for its entries
+        const objectsToArray = Object.entries(allCoursesObj).map(e ==>
+        Object.assign(e[1], { key: e[0] }))
+        console.log(objectsToArray)
+        // ... is the spread operator in es6 - add contents into another array
+        this.names = [...objectsToArray]
+        })
+        .catch(error => console.log(error))
+        console.log('Done getting all the data!')
+        },
+    },
+}
+   */
     methods: {
         getCourses() {
             return axios
             .get('https://uinames.com/api/?ext')
             .then(function(response) {
-                this.courses.push(response.data.results[0].name)
+                // Original example
+                // this.courses.push(response.data.results[0].name)
+                this.info.push(response.data.results[0].name)
             })
             .catch(function(error) {
                 console.log(error)
