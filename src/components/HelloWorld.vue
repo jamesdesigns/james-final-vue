@@ -27,15 +27,23 @@
   </ul>
 </div>
 <br>
-<v-btn color="info" @click="getCourses">APPROVE</v-btn>
+<v-btn color="info" @click="sendRequest">APPROVE</v-btn>
   </div>
 </template>
 
 <script>
 export default {
   name: "HelloWorld",
+  data: {
+    name: 'Hello James'
+  }
   props: {
     msg: String
+  },
+  methods: {
+    sendRequest: function() {
+       alert('Hello ' + this.name + '!')
+    }
   }
 };
 </script>
