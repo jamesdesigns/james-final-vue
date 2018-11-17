@@ -10,9 +10,7 @@
         
         </v-img>
         <v-card-title>
-         
             <ul>
-                <!--<li><img :src="info.data.photo" alt="image" /></li>-->
                 <li class="headline mb-0">{{ info.data.name }}</li>
                 <li>Age: {{ info.data.age }}</li>
                 <li>Gender: {{ info.data.gender }}</li>
@@ -28,11 +26,6 @@
   </v-layout>
   </div>
 
-
-
-
-  
- 
 </template>
 <script>
 // This is newly added as of Nov 14 in class. ( BELOW )
@@ -41,10 +34,6 @@ import axios from 'axios'
 export default {
     data() {
         return {
-            // Original example
-            // This is my New Attempt
-            // courses: []
-
             // New example
             // info: null
             info: []
@@ -53,13 +42,13 @@ export default {
     // New example
     mounted() {
         axios
-            .get('https://uinames.com/api/?amount=25')
+            .get('https://uinames.com/api/?ext')
             .then(response => (this.info = response))
     },
-   /*
+ 
    // This is ES6 way of doing things
    // This basically is how to get a massive object into an array
-
+/*
    methods: {
     getCourses() {
         // axios.get('https://sweltering-fire-2420.firebaseio.com/courses.json')
@@ -68,7 +57,7 @@ export default {
         console.log(response)
         const allCoursesObj = response.data
         // Built in JavaScript root - ask for its entries
-        const objectsToArray = Object.entries(allCoursesObj).map(e ==>
+        const objectsToArray = Object.entries(allCoursesObj).map(e =>
         Object.assign(e[1], { key: e[0] }))
         console.log(objectsToArray)
         // ... is the spread operator in es6 - add contents into another array
@@ -78,8 +67,7 @@ export default {
         console.log('Done getting all the data!')
         },
     },
-}
-   */
+}*/
     methods: {
         getCourses() {
             return axios
@@ -103,10 +91,6 @@ ul {
 ul li {
     list-style-type: none;
     text-align:left;
-}
-
-li {
-
 }
 
 h2 {
