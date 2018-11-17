@@ -36,7 +36,7 @@ export default {
   name: "HelloWorld",
   data: {
     name: 'Hello James'
-  }
+  },
   props: {
     msg: String
   },
