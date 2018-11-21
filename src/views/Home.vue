@@ -2,7 +2,196 @@
   <div class="home">
    <!-- Place a New logo here for the Home Page --> 
    <!-- <img alt="TeamUp logo" src="../assets/logo.png"> -->
-    <HelloWorld msg="Choose your Team"/>
+    <HelloWorld msg="Build a Team"/>
+
+<!-- New Stepper -->
+
+<v-stepper v-model="e6" vertical>
+    <v-stepper-step :complete="e6 > 1" step="1">
+      Choose Game 
+      <small>Choose the game you want to play.</small>
+    </v-stepper-step>
+
+    <v-stepper-content step="1">
+     <v-card color="grey lighten-1" class="mb-5" height="200px">
+                      <!-- NEW ADDED -->
+<v-layout row>
+    <v-flex xs12>
+     <!-- <v-card> -->
+
+
+        <v-divider></v-divider>
+
+        <v-list
+          subheader
+          two-line
+        >
+
+          <v-list-tile @click="">
+            <v-list-tile-action>
+              <v-checkbox v-model="notifications"></v-checkbox>
+            </v-list-tile-action>
+
+            <v-list-tile-content @click="notifications = !notifications">
+              <v-list-tile-title>Game 1</v-list-tile-title>
+              <v-list-tile-sub-title>Description: </v-list-tile-sub-title>
+            </v-list-tile-content>
+          </v-list-tile>
+
+          <v-list-tile @click="">
+            <v-list-tile-action>
+              <v-checkbox v-model="sound"></v-checkbox>
+            </v-list-tile-action>
+
+            <v-list-tile-content @click="sound = !sound">
+              <v-list-tile-title>Game 2</v-list-tile-title>
+              <v-list-tile-sub-title>Description:</v-list-tile-sub-title>
+            </v-list-tile-content>
+          </v-list-tile>
+
+          <v-list-tile @click="">
+            <v-list-tile-action>
+              <v-checkbox v-model="video"></v-checkbox>
+            </v-list-tile-action>
+
+            <v-list-tile-content @click="video = !video">
+              <v-list-tile-title>Game 3</v-list-tile-title>
+              <v-list-tile-sub-title>Description: </v-list-tile-sub-title>
+            </v-list-tile-content>
+          </v-list-tile>
+
+          <v-list-tile @click="">
+            <v-list-tile-action>
+              <v-checkbox v-model="invites"></v-checkbox>
+            </v-list-tile-action>
+
+            <v-list-tile-content @click="invites = !invites">
+              <v-list-tile-title>Game 4</v-list-tile-title>
+              <v-list-tile-sub-title>Description:</v-list-tile-sub-title>
+            </v-list-tile-content>
+          </v-list-tile>
+
+        </v-list>
+     <!-- </v-card> -->
+    </v-flex>
+  </v-layout>
+       
+       
+       </v-card> 
+      <v-btn color="pink lighten-2" @click="e6 = 2">Continue</v-btn>
+      <v-btn flat>Cancel</v-btn>
+    </v-stepper-content>
+
+    <v-stepper-step :complete="e6 > 2" step="2">Select Players
+      <small>Select players who will benefit you the most in forming an unbeatable team.</small>
+<!-- New Drag and Drop -->
+<!-- <h3>Drag and Drop</h3>   
+      <div v-drag-and-drop:options="options" class="drag-wrapper">   -->
+
+
+
+        <!-- END OF NEW ADDED -->
+<!--  <ul>
+    <li>Member 1</li>
+    <li>Member 2</li>
+    <li>Member 3</li>
+    <li>Member 4</li>
+    <li>Member 5</li>
+    <li>Member 6</li>
+  </ul>
+  -->
+<!-- </div> -->
+<!-- End of Drag and Drop -->
+    </v-stepper-step>
+
+    <v-stepper-content step="2">
+     <v-card color="grey lighten-1" class="mb-5" height="200px">
+       
+               <!-- NEW ADDED -->
+<v-layout row>
+    <v-flex xs12>
+     <!-- <v-card> -->
+
+
+        <v-divider></v-divider>
+
+        <v-list
+          subheader
+          two-line
+        >
+
+          <v-list-tile @click="">
+            <v-list-tile-action>
+              <v-checkbox v-model="notifications"></v-checkbox>
+            </v-list-tile-action>
+
+            <v-list-tile-content @click="notifications = !notifications">
+              <v-list-tile-title>Player 1</v-list-tile-title>
+              <v-list-tile-sub-title>Experience Level: </v-list-tile-sub-title>
+            </v-list-tile-content>
+          </v-list-tile>
+
+          <v-list-tile @click="">
+            <v-list-tile-action>
+              <v-checkbox v-model="sound"></v-checkbox>
+            </v-list-tile-action>
+
+            <v-list-tile-content @click="sound = !sound">
+              <v-list-tile-title>Player 2</v-list-tile-title>
+              <v-list-tile-sub-title>Experience Level:</v-list-tile-sub-title>
+            </v-list-tile-content>
+          </v-list-tile>
+
+          <v-list-tile @click="">
+            <v-list-tile-action>
+              <v-checkbox v-model="video"></v-checkbox>
+            </v-list-tile-action>
+
+            <v-list-tile-content @click="video = !video">
+              <v-list-tile-title>Player 3</v-list-tile-title>
+              <v-list-tile-sub-title>Experience Level: </v-list-tile-sub-title>
+            </v-list-tile-content>
+          </v-list-tile>
+
+          <v-list-tile @click="">
+            <v-list-tile-action>
+              <v-checkbox v-model="invites"></v-checkbox>
+            </v-list-tile-action>
+
+            <v-list-tile-content @click="invites = !invites">
+              <v-list-tile-title>Player 4</v-list-tile-title>
+              <v-list-tile-sub-title>Experience Level:</v-list-tile-sub-title>
+            </v-list-tile-content>
+          </v-list-tile>
+
+        </v-list>
+     <!-- </v-card> -->
+    </v-flex>
+  </v-layout>
+       </v-card> 
+      <v-btn color="pink lighten-2" @click="e6 = 3">Continue</v-btn>
+      <v-btn flat>Cancel</v-btn>
+    </v-stepper-content>
+
+    <v-stepper-step :complete="e6 > 3" step="3">View Selected Game and Players</v-stepper-step>
+
+    <v-stepper-content step="3">
+      <v-card color="white" class="mb-5" height="200px"></v-card>
+      <v-btn color="pink lighten-2" @click="e6 = 4">Continue</v-btn>
+      <v-btn flat>Cancel</v-btn>
+    </v-stepper-content>
+
+    <v-stepper-step step="4">Get Approved</v-stepper-step>
+    <v-stepper-content step="4">
+      <v-card color="white" class="mb-5" height="200px"></v-card>
+      <v-btn color="pink lighten-2" @click="e6 = 1">Send Request</v-btn>
+      <v-btn flat>Cancel</v-btn>
+    </v-stepper-content>
+  </v-stepper>
+
+<!-- End of Stepper -->
+
+
   </div>
 </template>
 
@@ -11,6 +200,11 @@
 import HelloWorld from "@/components/HelloWorld.vue";
 
 export default {
+    data () {
+      return {
+        e6: 1
+      }
+    },
   name: "home",
   components: {
     HelloWorld
@@ -21,4 +215,5 @@ export default {
 .home {
   margin-top:5%;
 }
+
 </style>

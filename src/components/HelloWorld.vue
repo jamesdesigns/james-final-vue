@@ -1,14 +1,17 @@
 <template>
-  <div class="hello">
+  <div id="app" class="hello">
+    <img width="960px" height="300" src="https://media.giphy.com/media/oxU7gskFCKEBixYYR7/giphy.gif" alt="Games" />
     <h1>{{ msg }}</h1>
     <p>
-      You now have the opportunity to choose who you want on your new team. Create two team options. Your first option may or may not be approved from the people you select.
-      Just select any team member that best fits your ideal team and get an approval within minutes.
+      You now have the opportunity to choose who you want to team up with. Choose the game you want to play. Select players you want to team up with.
+      Now you can build an unstoppable team that will only dominate your opponents.
     </p>
+
+
+
     <br>
-<h3>Drag and Drop</h3>   
-      <div v-drag-and-drop:options="options" class="drag-wrapper">   
-      
+<!-- <h3>Drag and Drop</h3>   
+      <div v-drag-and-drop:options="options" class="drag-wrapper">    
   <ul>
     <li>Member 1</li>
     <li>Member 2</li>
@@ -25,17 +28,18 @@
       <li>Member 11</li>
       <li>Member 12</li>
   </ul>
-</div>
+</div> -->
 <br>
-<v-btn color="info" @click="sendRequest">APPROVE</v-btn>
+<!-- <v-btn color="info" @click="sendRequest">APPROVE</v-btn> -->
   </div>
 </template>
 
 <script>
 export default {
+
   name: "HelloWorld",
   data: {
-    name: 'Hello James'
+    name: 'Hello James',
   },
   props: {
     msg: String
@@ -49,8 +53,12 @@ export default {
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+img {
+  margin:0;
+}
+
 h1 {
-  margin-top:5%;
+  margin-top:3%;
 }
 p {
   width: 50%;

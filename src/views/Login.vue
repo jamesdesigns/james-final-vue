@@ -19,7 +19,7 @@
       v-model="select"
       :items="items"
       :rules="[v => !!v || 'Item is required']"
-      label="Join a Team"
+      label="Game Experience Level"
       required
     ></v-select>
     <v-btn
@@ -53,12 +53,11 @@
       ],
       select: null,
       items: [
-        'Collaboration',
-        'Games',
-        'Production',
-        'Study',
-        'UX Design',
-        'Web Development',
+        'Newbie',
+        'Explorer',
+        'Gets the Job Done',
+        'Pro Level',
+        'Absolute Dominator',
         'Other'
       ],
       checkbox: false

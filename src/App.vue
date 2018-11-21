@@ -2,12 +2,17 @@
   <div id="app">
       <main-header></main-header>
    <!-- <p v-highlight:background.delayed="'gray'">TeamUp</p> -->
+
+
+
+
   </div>
 </template>
 <script>
 import Header from './components/Header.vue'
 
 export default {
+
   name: 'app',
   components: {
     'main-header': Header,

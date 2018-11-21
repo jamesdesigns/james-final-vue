@@ -19,7 +19,7 @@
           
         </v-card-title>
         <v-card-actions class="center-align">
-            <v-btn color="info" @click="getCourses">REQUEST MEMBER</v-btn>       
+            <v-btn color="pink lighten-2" @click="getCourses">REQUEST MEMBER</v-btn>       
         </v-card-actions>
       </v-card>
     </v-flex>

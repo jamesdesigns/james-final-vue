@@ -1,7 +1,7 @@
 <template>
 <div>
     <v-app> 
-       <v-toolbar color="blue" dark app clipped-left>
+       <v-toolbar color="black" dark app clipped-left>
            <v-toolbar-title class="font-weight-black">TeamUp<img src="../assets/logo-icon.png" alt="icon" /></v-toolbar-title>
         <div id="nav">
           <router-link class="menu" to="/">Home</router-link>
@@ -29,5 +29,8 @@ h1 {
 }
 .menu {
     padding-right: 20px;
+}
+.menu:hover, .menu:active {
+    color: pink;
 }
 </style>
