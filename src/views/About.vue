@@ -3,7 +3,7 @@
     <h1>How it Works</h1>
     <p>Build a new team online the easy way. Search for individuals who may be interested in teaming up with you to conquer the gaming world. Simply select the game you want to play and who you would like on your new team.</p> 
     <br>
-    <p>Choose individuals who might benefit you the most. Once you have selected your ideal team, fill out the form completely and click SEND REQUEST and each hand picked member will either approve or disapprove your request.</p>
+    <p>Choose individuals who might benefit you the most. Once you have selected your ideal team, fill out the form and click SEND REQUEST. Each hand picked player will either approve or disapprove your request. Good Luck!</p>
 
   </div>
 </template>

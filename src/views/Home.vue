@@ -13,7 +13,7 @@
     </v-stepper-step>
 
     <v-stepper-content step="1">
-     <v-card color="grey lighten-1" class="mb-5" height="200px">
+     <v-card color="grey lighten-1" class="mb-5" height="250px">
                       <!-- NEW ADDED -->
 <v-layout row>
     <v-flex xs12>
@@ -33,8 +33,8 @@
             </v-list-tile-action>
 
             <v-list-tile-content @click="notifications = !notifications">
-              <v-list-tile-title>Game 1</v-list-tile-title>
-              <v-list-tile-sub-title>Description: </v-list-tile-sub-title>
+              <v-list-tile-title>Red Dead Redemption II</v-list-tile-title>
+              <v-list-tile-sub-title>Description: Red Dead Redemption is a Western-themed action-adventure game developed by Rockstar San Diego and published by Rockstar Games</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
 
@@ -44,8 +44,8 @@
             </v-list-tile-action>
 
             <v-list-tile-content @click="sound = !sound">
-              <v-list-tile-title>Game 2</v-list-tile-title>
-              <v-list-tile-sub-title>Description:</v-list-tile-sub-title>
+              <v-list-tile-title>World of Warcraft</v-list-tile-title>
+              <v-list-tile-sub-title>Description: World of Warcraft takes place within the Warcraft world of Azeroth. World of Warcraft is the world's most popular MMORPG by player count.[</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
 
@@ -55,8 +55,8 @@
             </v-list-tile-action>
 
             <v-list-tile-content @click="video = !video">
-              <v-list-tile-title>Game 3</v-list-tile-title>
-              <v-list-tile-sub-title>Description: </v-list-tile-sub-title>
+              <v-list-tile-title>Call of Duty: Black Ops</v-list-tile-title>
+              <v-list-tile-sub-title>Description: The Black Ops universe comes to life in one massive battle royale experience, combining Black Ops signature combat and the biggest map in Call of Duty history.</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
 
@@ -66,8 +66,8 @@
             </v-list-tile-action>
 
             <v-list-tile-content @click="invites = !invites">
-              <v-list-tile-title>Game 4</v-list-tile-title>
-              <v-list-tile-sub-title>Description:</v-list-tile-sub-title>
+              <v-list-tile-title>Minecraft</v-list-tile-title>
+              <v-list-tile-sub-title>Description: Minecraft is a game about placing blocks and going on adventures.</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
 
@@ -105,7 +105,7 @@
     </v-stepper-step>
 
     <v-stepper-content step="2">
-     <v-card color="grey lighten-1" class="mb-5" height="200px">
+     <v-card color="grey lighten-1" class="mb-5" height="250px">
        
                <!-- NEW ADDED -->
 <v-layout row>
