@@ -107,14 +107,11 @@
     <v-stepper-content step="2">
      <v-card color="grey lighten-1" class="mb-5" height="250px">
        
-               <!-- NEW ADDED -->
+<!-- NEW ADDED -->
 <v-layout row>
     <v-flex xs12>
      <!-- <v-card> -->
-
-
         <v-divider></v-divider>
-
         <v-list
           subheader
           two-line
