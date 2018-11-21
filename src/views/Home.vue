@@ -126,8 +126,8 @@
             </v-list-tile-action>
 
             <v-list-tile-content @click="notifications = !notifications">
-              <v-list-tile-title>Player 1</v-list-tile-title>
-              <v-list-tile-sub-title>Experience Level: </v-list-tile-sub-title>
+              <v-list-tile-title>Mark Jensen</v-list-tile-title>
+              <v-list-tile-sub-title>Experience Level: Absolute Dominator</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
 
@@ -137,8 +137,8 @@
             </v-list-tile-action>
 
             <v-list-tile-content @click="sound = !sound">
-              <v-list-tile-title>Player 2</v-list-tile-title>
-              <v-list-tile-sub-title>Experience Level:</v-list-tile-sub-title>
+              <v-list-tile-title>John Varanakis</v-list-tile-title>
+              <v-list-tile-sub-title>Experience Level: Newbie</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
 
@@ -148,8 +148,8 @@
             </v-list-tile-action>
 
             <v-list-tile-content @click="video = !video">
-              <v-list-tile-title>Player 3</v-list-tile-title>
-              <v-list-tile-sub-title>Experience Level: </v-list-tile-sub-title>
+              <v-list-tile-title>Adam Rupp</v-list-tile-title>
+              <v-list-tile-sub-title>Experience Level: Pro Level</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
 
@@ -159,8 +159,8 @@
             </v-list-tile-action>
 
             <v-list-tile-content @click="invites = !invites">
-              <v-list-tile-title>Player 4</v-list-tile-title>
-              <v-list-tile-sub-title>Experience Level:</v-list-tile-sub-title>
+              <v-list-tile-title>Allison Love</v-list-tile-title>
+              <v-list-tile-sub-title>Experience Level: Explorer</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
 
