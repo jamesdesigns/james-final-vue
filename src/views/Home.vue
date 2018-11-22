@@ -5,7 +5,7 @@
     <HelloWorld msg="Build a Team"/>
 
 <!-- New Stepper -->
-
+<div class="mycontainer">
 <v-stepper v-model="e6" vertical>
     <v-stepper-step :complete="e6 > 1" step="1">
       Choose Game 
@@ -18,15 +18,11 @@
 <v-layout row>
     <v-flex xs12>
      <!-- <v-card> -->
-
-
         <v-divider></v-divider>
-
         <v-list
           subheader
           two-line
         >
-
           <v-list-tile @click="">
             <v-list-tile-action>
               <v-checkbox v-model="notifications"></v-checkbox>
@@ -87,9 +83,6 @@
 <!-- New Drag and Drop -->
 <!-- <h3>Drag and Drop</h3>   
       <div v-drag-and-drop:options="options" class="drag-wrapper">   -->
-
-
-
         <!-- END OF NEW ADDED -->
 <!--  <ul>
     <li>Member 1</li>
@@ -187,7 +180,7 @@
   </v-stepper>
 
 <!-- End of Stepper -->
-
+</div> <!-- End of my container -->
 
   </div>
 </template>
@@ -212,5 +205,8 @@ export default {
 .home {
   margin-top:5%;
 }
-
+.mycontainer {
+  margin-left:3%;
+  margin-right: 3%;
+}
 </style>
