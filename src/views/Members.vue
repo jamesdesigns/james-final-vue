@@ -42,7 +42,7 @@ export default {
     // New example
     mounted() {
         axios
-            .get('https://uinames.com/api/?ext')
+            .get('https://uinames.com/api/?amount=10')
             .then(response => (this.info = response))
     },
  
@@ -71,7 +71,7 @@ export default {
     methods: {
         getCourses() {
             return axios
-            .get('https://uinames.com/api/?ext')
+            .get('https://uinames.com/api/?amount=10')
             .then(function(response) {
                 // Original example
                 // this.courses.push(response.data.results[0].name)
