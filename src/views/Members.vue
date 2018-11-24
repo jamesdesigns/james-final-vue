@@ -99,14 +99,10 @@ h2 {
 }
 
 .container {
-    margin-top: 100px;
-    margin:0 auto;
+    margin-top: 105px;
+    margin-left: 12%;
 }
 
-
-img {
-    margin-left: 5px;
-}
 .center-align {
     margin-left:20%;
     padding-bottom: 30px;
