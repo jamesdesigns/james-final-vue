@@ -100,6 +100,7 @@ h2 {
 
 .container {
     margin-top: 100px;
+    margin:0 auto;
 }
 
 
