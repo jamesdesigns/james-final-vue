@@ -1,16 +1,23 @@
 <template>
 <div>
+
  <v-form ref="form" v-model="valid" lazy-validation>
-       <v-flex xs12 sm6 offset-sm3>
+    <v-flex xs12 sm6 offset-sm3>
     <v-text-field
-      v-model="username"
+      v-model="userData.username"
       :rules="nameRules"
       :counter="20"
       label="Username"
       required
     ></v-text-field>
     <v-text-field
-      v-model="password"
+        v-model="userData.email"
+        :rules="emailRules"
+        label="Email"
+        required
+        >{{ email }}</v-text-field>
+    <v-text-field
+      v-model="userData.password"
       :rules="passwordRules"
       label="Password"
       required
@@ -31,6 +38,7 @@
     <v-btn @click="clear">clear</v-btn>
        </v-flex>
   </v-form>
+
 </div>
 
 
@@ -40,8 +48,14 @@
 
   export default {
     data: () => ({
+      userData: {
+          username: '',
+          email: 'test@test.com',
+          password: '',
+          select: ''
+      },  
       valid: true,
-      name: '',
+      username: '',
       nameRules: [
         v => !!v || 'Name is required',
         v => (v && v.length <= 20) || 'Name must be less than 10 characters'
@@ -50,6 +64,10 @@
       emailRules: [
         v => !!v || 'E-mail is required',
         v => /.+@.+/.test(v) || 'E-mail must be valid'
+      ],
+      password: '',
+      passwordRules: [
+        v => !!v || 'Password is required',  
       ],
       select: null,
       items: [
