@@ -1,23 +1,22 @@
 <template>
 <div>
-
  <v-form ref="form" v-model="valid" lazy-validation>
     <v-flex xs12 sm6 offset-sm3>
     <v-text-field
-      v-model="userData.username"
+      v-model="username"
       :rules="nameRules"
       :counter="20"
       label="Username"
       required
     ></v-text-field>
     <v-text-field
-        v-model="userData.email"
+        v-model="email"
         :rules="emailRules"
         label="Email"
         required
-        >{{ email }}</v-text-field>
+        ></v-text-field>
     <v-text-field
-      v-model="userData.password"
+      v-model="password"
       :rules="passwordRules"
       label="Password"
       required
@@ -36,24 +35,15 @@
       submit
     </v-btn>
     <v-btn @click="clear">clear</v-btn>
-       </v-flex>
+    </v-flex>
   </v-form>
-
 </div>
-
-
 </template>
 <script>
  import axios from 'axios'
 
   export default {
     data: () => ({
-      userData: {
-          username: '',
-          email: 'test@test.com',
-          password: '',
-          select: ''
-      },  
       valid: true,
       username: '',
       nameRules: [
@@ -78,6 +68,7 @@
         'Absolute Dominator',
         'Other'
       ],
+     
       checkbox: false
     }),
 
@@ -88,8 +79,10 @@
           axios.post('/api/submit', {
             name: this.name,
             email: this.email,
+            password: this.password,
             select: this.select,
             checkbox: this.checkbox
+
           })
         }
       },
