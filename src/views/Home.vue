@@ -22,6 +22,7 @@
         <v-list
           subheader
           two-line
+          v-for="videogames in allGames" :key="videogames.title"
         >
           <v-list-tile @click="">
             <v-list-tile-action>
@@ -29,8 +30,8 @@
             </v-list-tile-action>
 
             <v-list-tile-content @click="notifications = !notifications">
-              <v-list-tile-title>Red Dead Redemption II</v-list-tile-title>
-              <v-list-tile-sub-title>Description: Red Dead Redemption is a Western-themed action-adventure game developed by Rockstar San Diego and published by Rockstar Games</v-list-tile-sub-title>
+              <v-list-tile-title>{{ videogames.title }}</v-list-tile-title>
+              <v-list-tile-sub-title>{{ videogames.setting  }}</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
 
@@ -188,10 +189,13 @@
 <script>
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
+import { videogames } from '../assets/videogames'
+
 
 export default {
     data () {
       return {
+        allGames: videogames,
         e6: 1
       }
     },

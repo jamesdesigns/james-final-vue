@@ -9,15 +9,11 @@
   </div>
 </template>
 <script>
+
 import Header from './components/Header.vue'
-import { videogames } from '../assets/videogames'
+
 
 export default {
-  data: function() {
-    return {
-      allVideoGames: videogames
-    }
-  },
 
   name: 'app',
   components: {
