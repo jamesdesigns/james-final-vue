@@ -62,9 +62,9 @@
       select: null,
       items: [
         'Newbie',
-        'Explorer',
+        'Rookie',
         'Gets the Job Done',
-        'Pro Level',
+        'Proficient',
         'Absolute Dominator',
         'Other'
       ],
