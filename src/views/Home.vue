@@ -2,13 +2,13 @@
   <div class="home">
    <!-- Place a New logo here for the Home Page --> 
    <!-- <img alt="TeamUp logo" src="../assets/logo.png"> -->
-    <HelloWorld msg="Build a Team"/>
+    <HelloWorld msg="Find a Team"/>
 
 <!-- New Stepper -->
 <div class="mycontainer">
 <v-stepper v-model="e6" vertical>
     <v-stepper-step :complete="e6 > 1" step="1">
-      Choose Game 
+      Choose a Game 
       <small>Choose the game you want to play.</small>
     </v-stepper-step>
 

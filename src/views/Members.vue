@@ -28,7 +28,6 @@
 
 </template>
 <script>
-// This is newly added as of Nov 14 in class. ( BELOW )
 import axios from 'axios'
 
 export default {
@@ -71,7 +70,8 @@ export default {
     methods: {
         getCourses() {
             return axios
-            .get('https://uinames.com/api/?ext')
+            // Original UINAMES used
+             .get('https://uinames.com/api/?ext')
             .then(function(response) {
                 // Original example
                 // this.courses.push(response.data.results[0].name)
