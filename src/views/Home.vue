@@ -213,7 +213,7 @@ export default {
   margin-top:5%;
 }
 .mycontainer {
-  margin-left:3%;
-  margin-right: 3%;
+  margin-left:5%;
+  margin-right: 5%;
 }
 </style>

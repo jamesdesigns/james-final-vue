@@ -99,7 +99,7 @@ h2 {
 }
 
 .container {
-    margin-top: 105px;
+    margin-top: 85px;
     margin-left: 12%;
 }
 

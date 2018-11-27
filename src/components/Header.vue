@@ -1,20 +1,44 @@
 <template>
 <div>
+
+<!--
+ <v-tabs
+    color="purple"
+    dark
+    slider-color="purple lighten-3"
+  >
+    <v-tab
+      v-for="i in 3"
+      :key="i"
+      ripple
+    >
+      Item {{ i }}
+    
+  </v-tabs>
+
+
+
+ -->   
+
+
+
     <v-app> 
        <v-toolbar color="black" dark app clipped-left>
            <v-toolbar-title class="font-weight-black"><img src="../assets/logo-icon.png" alt="TeamUp" />TeamUp</v-toolbar-title>
         <div id="nav">
-          <router-link class="menu" to="/">Home</router-link>
-          <router-link class="menu" to="/members">Members</router-link>
-          <router-link class="menu" to="/about">About</router-link>
-          <router-link class="menu" to="/login">Login</router-link>
+        <v-tabs color="black" dark slider-color="pink lighten-1">
+        <v-tab ripple><router-link class="menu" to="/">Home</router-link></v-tab>
+        <v-tab ripple><router-link class="menu" to="/members">Members</router-link></v-tab>
+        <v-tab ripple><router-link class="menu" to="/about">About</router-link></v-tab>
+        <v-tab ripple><router-link class="menu" to="/login">Login</router-link></v-tab>
+
+         
+        </v-tabs>
       </div>
       
         </v-toolbar>
         <router-view/>
     </v-app>
-<!-- <h1>Header Component</h1>
-<h1>Header Component</h1>  -->
  </div>   
 </template>
 <script>

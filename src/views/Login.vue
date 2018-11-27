@@ -29,6 +29,7 @@
       required
     ></v-select>
     <v-btn
+      color="pink lighten-2"  
       :disabled="!valid"
       @click="submit"
     >
