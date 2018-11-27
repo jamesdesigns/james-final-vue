@@ -9,11 +9,11 @@
 <v-stepper v-model="e6" vertical>
     <v-stepper-step :complete="e6 > 1" step="1">
       Choose a Game 
-      <small>Choose the game you want to play.</small>
+      <small>Choose the games you want to play.</small>
     </v-stepper-step>
 
     <v-stepper-content step="1">
-     <v-card color="grey lighten-1" class="mb-5" height="250px">
+     <v-card color="grey lighten-1" class="mb-5"> 
                       <!-- NEW ADDED -->
 <v-layout row>
     <v-flex xs12>
@@ -22,19 +22,22 @@
         <v-list
           subheader
           two-line
-          v-for="videogames in allGames" :key="videogames.title"
         >
-          <v-list-tile @click="">
+          <v-list-tile @click="" v-for="game in allGames" :key="game.title">
             <v-list-tile-action>
               <v-checkbox v-model="notifications"></v-checkbox>
             </v-list-tile-action>
 
-            <v-list-tile-content @click="notifications = !notifications">
-              <v-list-tile-title>{{ videogames.title }}</v-list-tile-title>
-              <v-list-tile-sub-title>{{ videogames.setting  }}</v-list-tile-sub-title>
+            <v-list-tile-content @click="notifications = !notifications" >
+              <v-list-tile-title>
+                {{ game.title }}
+                </v-list-tile-title>
+              <v-list-tile-sub-title>
+                {{ game.setting }}
+              </v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
-
+<!--
           <v-list-tile @click="">
             <v-list-tile-action>
               <v-checkbox v-model="sound"></v-checkbox>
@@ -67,7 +70,7 @@
               <v-list-tile-sub-title>Description: Minecraft is a game about placing blocks and going on adventures.</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
-
+-->
         </v-list>
      <!-- </v-card> -->
     </v-flex>
