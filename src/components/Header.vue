@@ -24,7 +24,7 @@
 
     <v-app> 
        <v-toolbar color="black" dark app clipped-left>
-           <v-toolbar-title class="font-weight-black"><img src="../assets/logo-icon.png" alt="TeamUp" />TeamUp</v-toolbar-title>
+           <v-toolbar-title class="font-weight-black"><router-link class="menu" to="/"><img src="../assets/logo-icon.png" alt="TeamUp" />TeamUp</router-link></v-toolbar-title>
         <div id="nav">
         <v-tabs color="black" dark slider-color="pink lighten-1">
         <v-tab ripple><router-link class="menu" to="/">Home</router-link></v-tab>
