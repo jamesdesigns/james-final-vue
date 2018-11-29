@@ -3,6 +3,7 @@
    <!-- Place a New logo here for the Home Page --> 
    <!-- <img alt="TeamUp logo" src="../assets/logo.png"> -->
     <HelloWorld msg="Find a Team"/>
+    <p>User: {{ userName }}</p>
 
 <!-- New Stepper -->
 <div class="mycontainer">
@@ -208,6 +209,13 @@ export default {
   name: "home",
   components: {
     HelloWorld
+  },
+
+  // ADD NEW STATE MANAGEMENT
+  computed: {
+    userName() {
+      return this.$store.getters.userName;
+    }
   }
 };
 </script>

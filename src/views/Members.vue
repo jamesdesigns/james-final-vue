@@ -2,7 +2,7 @@
 
 <div class="container">
     <v-layout>
-    <v-flex xs12 sm6 offset-sm3>
+    <v-flex xs12 sm6 offset-sm3 v-for="profile in ">
       <v-card width="300px">
        <v-img
           height="300px"  
@@ -19,7 +19,9 @@
           
         </v-card-title>
         <v-card-actions class="center-align">
-            <v-btn color="pink lighten-2" @click="getCourses">REQUEST MEMBER</v-btn>       
+            <v-btn color="pink lighten-2" @click="requestMember">
+                REQUEST MEMBER
+                </v-btn>       
         </v-card-actions>
       </v-card>
     </v-flex>
@@ -49,7 +51,7 @@ export default {
    // This basically is how to get a massive object into an array
 /*
    methods: {
-    getCourses() {
+    requestMember() {
         // axios.get('https://sweltering-fire-2420.firebaseio.com/courses.json')
         axios.get('https://uinames.com/api/?ext')
         .then(response => { // wow, diff between es5 function and arrow
@@ -68,7 +70,7 @@ export default {
     },
 }*/
     methods: {
-        getCourses() {
+        requestMember() {
             return axios
             // Original UINAMES used
              .get('https://uinames.com/api/?ext')
