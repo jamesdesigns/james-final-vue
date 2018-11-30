@@ -3,8 +3,8 @@
 <!--  <div class="container"> -->
     <v-container fluid>
     <v-layout column>
-   <v-flex xs12 sm6 offset-sm3 v-for="player in info">
-  
+   <v-flex xs12 sm6 offset-sm3>
+  <div v-for="(player, i) in info" :key="i">
       <v-card width="300px">
        <v-img
           height="300px"  
@@ -26,6 +26,7 @@
                 </v-btn>       
         </v-card-actions>
       </v-card>
+      </div>
     </v-flex>
   </v-layout>
   </v-container>
@@ -34,7 +35,6 @@
 </template>
 <script>
 import axios from 'axios'
-
 export default {
     data() {
         return {
@@ -45,20 +45,17 @@ export default {
     },
    
    // 'https://uinames.com/api/?ext&?amount=50'
-
     // New example
     mounted() {
         axios
-            .get('https://uinames.com/api/?ext&?amount=50')
+            .get('https://uinames.com/api/?ext')
             .then(response => (this.info = response))
     },
-
-
     methods: {
         requestMember() {
             return axios
             // Original UINAMES used
-             .get('https://uinames.com/api/?ext&?amount=50')
+             .get('https://uinames.com/api/?ext')
             .then(function(response) {
                 // Original example
                 // this.courses.push(response.data.results[0].name)
@@ -73,26 +70,21 @@ export default {
 </script>
 <style>
 ul {
-
 }
 ul li {
     list-style-type: none;
     text-align:left;
 }
-
 h2 {
     text-align: left;
     margin-left:10%;
 }
-
 .container {
     margin-top: 85px;
     margin-left: 5%;
 }
-
 .center-align {
     margin-left:20%;
     padding-bottom: 30px;
 }
-
 </style>

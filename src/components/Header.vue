@@ -33,6 +33,6 @@ h1 {
     color: pink;
 }
 #nav {
-    margin-top:8px;
+    margin-top:15px; 
 }
 </style>
