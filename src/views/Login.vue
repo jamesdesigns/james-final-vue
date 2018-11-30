@@ -3,6 +3,7 @@
 
 
  <v-form ref="form" v-model="valid" lazy-validation>
+     <h1 class="animated bounceIn">Login Form</h1>
     <v-flex xs12 sm6 offset-sm3>
     <v-text-field
       v-model="username"
@@ -17,15 +18,6 @@
         label="Email"
         required
         ></v-text-field>
-
-
-     <!--
-            v-model="password"
-            :append-icon="show1 ? 'visibility_off' : 'visibility'"
-            :rules="[rules.required, rules.min]"
-            :type="show1 ? 'text' : 'password'"
-
-         -->   
     <v-text-field
       v-model="password"
       :rules="passwordRules"
@@ -123,11 +115,5 @@
   }
 </script>
 <style scoped>
-h1 {
-    margin-top:10%;
-}
 
-form {
-    margin-top:15%;
-}
 </style>
