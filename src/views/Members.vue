@@ -16,13 +16,13 @@
                 <li class="headline mb-0">{{ info.data.name }}</li>
                 <li>Age: {{ info.data.age }}</li>
                 <li>Gender: {{ info.data.gender }}</li>
-                <li>Email: {{ info.data.email }}</li>
+                <!-- <li>Email: {{ info.data.email }}</li> -->
             </ul>
           
         </v-card-title>
         <v-card-actions class="center-align">
             <v-btn color="pink lighten-2" @click="requestMember">
-                REQUEST MEMBER
+                VIEW FULL PROFILE
                 </v-btn>       
         </v-card-actions>
       </v-card>
