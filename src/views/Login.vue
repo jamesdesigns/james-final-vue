@@ -1,5 +1,7 @@
 <template>
 <div>
+
+
  <v-form ref="form" v-model="valid" lazy-validation>
     <v-flex xs12 sm6 offset-sm3>
     <v-text-field
@@ -101,6 +103,21 @@
       },
       clear () {
         this.$refs.form.reset()
+      },
+
+      // NEW STATE MANAGEMENT
+      onSubmit() {
+          const formData = {
+              name: this.name,
+              email: this.email,
+              password: this.password,
+          }
+          console.log(formData)
+          this.$store.dispatch('userLoggedIn', {
+              name: formData.name,
+              email: formData.email,
+              password: formData.password,
+          })
       }
     }
   }

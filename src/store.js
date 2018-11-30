@@ -17,14 +17,14 @@ export default new Vuex.Store({
 export default new Vuex.Store({
   state: {
     user: {
-      name: '',
+      username: 'Villian',
       email: '',
-      passwords: ''
+      password: ''
     }
   },
   getters: {
     userName(state){
-      return state.user.name
+      return state.user.username
     },
   },
   mutations: {

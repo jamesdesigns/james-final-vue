@@ -1,7 +1,8 @@
 <template>
-
-<div class="container">
-    <v-layout>
+<div>
+<!--  <div class="container"> -->
+    <v-container fluid>
+    <v-layout column>
    <v-flex xs12 sm6 offset-sm3 v-for="player in info">
   
       <v-card width="300px">
@@ -12,10 +13,10 @@
         </v-img>
         <v-card-title>
             <ul>
-                <li class="headline mb-0">{{ info.data[4].name }}</li>
-                <li>Age: {{ info.data[4].age }}</li>
-                <li>Gender: {{ info.data[4].gender }}</li>
-                <li>Email: {{ info.data[4].email }}</li>
+                <li class="headline mb-0">{{ info.data.name }}</li>
+                <li>Age: {{ info.data.age }}</li>
+                <li>Gender: {{ info.data.gender }}</li>
+                <li>Email: {{ info.data.email }}</li>
             </ul>
           
         </v-card-title>
@@ -27,6 +28,7 @@
       </v-card>
     </v-flex>
   </v-layout>
+  </v-container>
   </div>
 
 </template>
@@ -41,30 +43,32 @@ export default {
             info: []
     }
     },
-    
+   
+   // 'https://uinames.com/api/?ext&?amount=50'
+
     // New example
     mounted() {
         axios
-            .get('https://uinames.com/api/?ext&amount=25')
+            .get('https://uinames.com/api/?ext&?amount=50')
             .then(response => (this.info = response))
     },
- 
-/*
+
+
     methods: {
         requestMember() {
             return axios
             // Original UINAMES used
-             .get('https://uinames.com/api/?ext')
+             .get('https://uinames.com/api/?ext&?amount=50')
             .then(function(response) {
                 // Original example
                 // this.courses.push(response.data.results[0].name)
-                this.info.push(response.data.results[0].name)
+                this.info.push(response.data.results[50].name)
             })
             .catch(function(error) {
                 console.log(error)
             })
         }
-    } */
+    } 
 }
 </script>
 <style>
@@ -83,7 +87,7 @@ h2 {
 
 .container {
     margin-top: 85px;
-    margin-left: 12%;
+    margin-left: 5%;
 }
 
 .center-align {
