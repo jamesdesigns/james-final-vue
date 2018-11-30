@@ -2,7 +2,7 @@
 
 <div class="container">
     <v-layout>
-   <v-flex xs12 sm6 offset-sm3>
+   <v-flex xs12 sm6 offset-sm3 v-for="player in info">
   
       <v-card width="300px">
        <v-img
