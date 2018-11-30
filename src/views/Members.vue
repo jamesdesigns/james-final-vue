@@ -2,7 +2,8 @@
 
 <div class="container">
     <v-layout>
-    <v-flex xs12 sm6 offset-sm3 v-for="profile in ">
+   <v-flex xs12 sm6 offset-sm3>
+  
       <v-card width="300px">
        <v-img
           height="300px"  
@@ -11,10 +12,10 @@
         </v-img>
         <v-card-title>
             <ul>
-                <li class="headline mb-0">{{ info.data.name }}</li>
-                <li>Age: {{ info.data.age }}</li>
-                <li>Gender: {{ info.data.gender }}</li>
-                <li>Email: {{ info.data.email }}</li>
+                <li class="headline mb-0">{{ info.data[4].name }}</li>
+                <li>Age: {{ info.data[4].age }}</li>
+                <li>Gender: {{ info.data[4].gender }}</li>
+                <li>Email: {{ info.data[4].email }}</li>
             </ul>
           
         </v-card-title>
@@ -40,35 +41,15 @@ export default {
             info: []
     }
     },
+    
     // New example
     mounted() {
         axios
-            .get('https://uinames.com/api/?ext')
+            .get('https://uinames.com/api/?ext&amount=25')
             .then(response => (this.info = response))
     },
  
-   // This is ES6 way of doing things
-   // This basically is how to get a massive object into an array
 /*
-   methods: {
-    requestMember() {
-        // axios.get('https://sweltering-fire-2420.firebaseio.com/courses.json')
-        axios.get('https://uinames.com/api/?ext')
-        .then(response => { // wow, diff between es5 function and arrow
-        console.log(response)
-        const allCoursesObj = response.data
-        // Built in JavaScript root - ask for its entries
-        const objectsToArray = Object.entries(allCoursesObj).map(e =>
-        Object.assign(e[1], { key: e[0] }))
-        console.log(objectsToArray)
-        // ... is the spread operator in es6 - add contents into another array
-        this.names = [...objectsToArray]
-        })
-        .catch(error => console.log(error))
-        console.log('Done getting all the data!')
-        },
-    },
-}*/
     methods: {
         requestMember() {
             return axios
@@ -83,7 +64,7 @@ export default {
                 console.log(error)
             })
         }
-    } 
+    } */
 }
 </script>
 <style>

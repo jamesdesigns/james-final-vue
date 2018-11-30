@@ -3,6 +3,7 @@
    <!-- Place a New logo here for the Home Page --> 
    <!-- <img alt="TeamUp logo" src="../assets/logo.png"> -->
     <HelloWorld msg="Find a Team"/>
+    <!-- ADD NEW STATE MANAGEMENT: USER:  -->
     <p>User: {{ userName }}</p>
 
 <!-- New Stepper -->

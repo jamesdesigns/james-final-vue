@@ -15,9 +15,19 @@
         label="Email"
         required
         ></v-text-field>
+
+
+     <!--
+            v-model="password"
+            :append-icon="show1 ? 'visibility_off' : 'visibility'"
+            :rules="[rules.required, rules.min]"
+            :type="show1 ? 'text' : 'password'"
+
+         -->   
     <v-text-field
       v-model="password"
       :rules="passwordRules"
+      :type="show1 ? 'text' : 'password'"
       label="Password"
       required
     ></v-text-field>
@@ -57,8 +67,10 @@
         v => /.+@.+/.test(v) || 'E-mail must be valid'
       ],
       password: '',
+      show1: false,
       passwordRules: [
-        v => !!v || 'Password is required',  
+        v => !!v || 'Password is required',
+        v => v.length >= 8 || 'Min 8 characters',  
       ],
       select: null,
       items: [
