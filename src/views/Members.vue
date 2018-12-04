@@ -3,12 +3,10 @@
 <!--  <div class="container"> -->
     <v-container fluid>
     <v-layout column>
-   <v-flex xs12 sm6 offset-sm3>
-  <div v-for="(player, i) in info" :key="i">
-      <v-card width="300px">
-       <v-img
-          height="300px"  
-          :src="info.data.photo" alt="image" />
+   <v-flex xs12 sm6 offset-sm3 v-for="i in 20" :key="i" xs4>
+  <div>
+      <v-card width="200px">
+       <v-img :src="`https://randomuser.me/api/portraits/women/${i + 20}.jpg`" alt="image" width="200px" height="200px">
         
         </v-img>
         <v-card-title>
@@ -28,6 +26,7 @@
       </v-card>
       </div>
     </v-flex>
+
   </v-layout>
   </v-container>
   </div>
@@ -84,7 +83,7 @@ h2 {
     margin-left: 5%;
 }
 .center-align {
-    margin-left:20%;
+    margin-left:5%;
     padding-bottom: 30px;
 }
 </style>
