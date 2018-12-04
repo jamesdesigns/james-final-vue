@@ -34,6 +34,7 @@
 
   </v-layout>
   </v-container>
+
     <v-container fluid>
     <v-layout 
     row
@@ -77,10 +78,10 @@
    <v-flex v-for="i in 4" :key="i">
   <div>
       <v-card width="200px">
-       <v-img :src="`https://randomuser.me/api/portraits/women/${i + 50}.jpg`" alt="image" width="200px" height="200px">
+       <v-img :src="info.data.picture" alt="image" width="200px" height="200px">
         
         </v-img>
-        <v-card-title>
+        <v-card-title> 
             <ul>
                 <li class="headline mb-0">{{ info.data.name }}</li>
                 <li>Age: {{ info.data.age }}</li>
@@ -110,7 +111,7 @@ export default {
         return {
             // New example
             // info: null
-            info: []
+            info: null
     }
     },
    
@@ -119,6 +120,7 @@ export default {
     mounted() {
         axios
             .get('https://uinames.com/api/?ext')
+          // .get('https://randomuser.me/api/?results=10&name&gender&email')
             .then(response => (this.info = response))
     },
     methods: {
