@@ -4,7 +4,7 @@
    <!-- <img alt="TeamUp logo" src="../assets/logo.png"> -->
     <HelloWorld msg="Find a Team"/>
     <!-- ADD NEW STATE MANAGEMENT: USER:  -->
-    <p>Player Login: {{ userName }}</p>
+  <p>Welcome {{ userName }}!</p>
 
 <!-- New Stepper -->
 <div class="mycontainer">

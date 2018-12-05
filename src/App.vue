@@ -2,8 +2,13 @@
   <div id="app">
       <main-header></main-header>
     <div class="plyrStat" v-highlight:background.delayed="'#58bdbb'">
-      <p>Players: 3</p>
-      <p>Game Selected: World of Warcraft</p></div>
+      <p></p>
+      <p>
+        Team Leader: {{ userName }}<br>
+        Players: 3<br>
+        Game Selected: World of Warcraft
+        </p>
+        </div>
   </div>
 </template>
 <script>
@@ -12,6 +17,12 @@ export default {
   name: 'app',
   components: {
     'main-header': Header,
+  },
+    // ADD NEW STATE MANAGEMENT
+  computed: {
+    userName() {
+      return this.$store.getters.userName;
+    }
   }
 }
 </script>

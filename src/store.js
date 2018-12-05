@@ -17,9 +17,10 @@ export default new Vuex.Store({
 export default new Vuex.Store({
   state: {
     user: {
-      username: 'Villian',
+      username: '',
       email: '',
-      password: ''
+      password: '',
+      select: ''
     }
   },
   getters: {
@@ -33,9 +34,10 @@ export default new Vuex.Store({
     }
   },
   actions: {
-    userLoggedIn({commit}, user){
+    userLoggedIn({commit}, user) {
       commit('storeUser', user)
-      router.replace('/')
+      // router.replace('/')
+      router.replace('App.vue')
     }
   }
 });

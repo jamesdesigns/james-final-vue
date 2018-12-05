@@ -110,7 +110,7 @@ export default {
         return {
             // New example
             // info: null
-            info: null
+            info: []
     }
     },
    

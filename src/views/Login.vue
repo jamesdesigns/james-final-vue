@@ -35,13 +35,24 @@
     <v-btn
       color="pink lighten-2"  
       :disabled="!valid"
-      @click="submit"
+      @click="onSubmit"
     >
       submit
     </v-btn>
     <v-btn @click="clear">clear</v-btn>
+
+  <div class="verifyInfo">
+      <ul>
+          <li>Username: {{ username }}</li>
+          <li>Email: {{ email }}</li>
+          <li>Password: {{ password }}</li>
+          <li>Game Experience: {{ select }}</li>
+          </ul>
+  </div>
+
     </v-flex>
   </v-form>
+
 </div>
 </template>
 <script>
@@ -66,6 +77,7 @@
         v => !!v || 'Password is required',
         v => v.length >= 8 || 'Min 8 characters',  
       ],
+      select: '',  
       select: null,
       items: [
         'Newbie',
@@ -84,7 +96,7 @@
         if (this.$refs.form.validate()) {
           // Native form submission is not yet supported
           axios.post('/api/submit', {
-            name: this.name,
+            username: this.username,
             email: this.email,
             password: this.password,
             select: this.select,
@@ -100,20 +112,26 @@
       // NEW STATE MANAGEMENT
       onSubmit() {
           const formData = {
-              name: this.name,
+              username: this.username,
               email: this.email,
               password: this.password,
+              select: this.select
           }
           console.log(formData)
           this.$store.dispatch('userLoggedIn', {
-              name: formData.name,
+              username: formData.username,
               email: formData.email,
               password: formData.password,
+              select: formData.select
           })
       }
     }
   }
 </script>
-<style scoped>
-
+<style>
+.verifyInfo {
+    color:#f344a5;
+    margin-top:5%;
+    margin-left: -20px;
+}
 </style>

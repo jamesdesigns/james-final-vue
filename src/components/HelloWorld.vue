@@ -1,6 +1,7 @@
 <template>
   <div id="app" class="hello">
-    <img width="960px" height="300" src="https://media.giphy.com/media/oxU7gskFCKEBixYYR7/giphy.gif" alt="Games" />
+   <img width="960px" height="300" src="https://media.giphy.com/media/oxU7gskFCKEBixYYR7/giphy.gif" alt="Games" />
+
     <h1 class="animated bounceIn">{{ msg }}</h1>
     <p>
       You now have the opportunity to choose the best players to team up with. Choose the games you want to play. Select different level of players you want to team up with. Get your request approved from players.
