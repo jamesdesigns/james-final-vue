@@ -2,9 +2,10 @@
   <div class="home">
    <!-- Place a New logo here for the Home Page --> 
    <!-- <img alt="TeamUp logo" src="../assets/logo.png"> -->
+    
     <HelloWorld msg="Find a Team"/>
     <!-- ADD NEW STATE MANAGEMENT: USER:  -->
-  <p>Welcome {{ userName }}!</p>
+ <p>Get Started {{ userName }}!</p>
 
 <!-- New Stepper -->
 <div class="mycontainer">
