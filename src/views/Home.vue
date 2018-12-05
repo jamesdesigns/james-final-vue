@@ -5,8 +5,9 @@
     
     <HelloWorld msg="Find a Team"/>
     <!-- ADD NEW STATE MANAGEMENT: USER:  -->
- <p>Get Started {{ userName }}!</p>
-
+ <div class="start">
+  <h2>Welcome {{ userName }}!</h2>
+</div>
 <!-- New Stepper -->
 <div class="mycontainer">
 <v-stepper v-model="e6" vertical>
@@ -230,5 +231,13 @@ export default {
 .mycontainer {
   margin-left:12%;
   margin-right: 12%;
+}
+h2 {
+  color: #5cc1a6;
+  margin-bottom: 20px;
+  margin-top: -10px;
+}
+.start {
+  margin-left: 35%;
 }
 </style>
