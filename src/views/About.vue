@@ -11,7 +11,6 @@
 </script>
 <style>
 h1 {
-  font-size: 200%;
   color: #000;
   margin-top: 10%;
 }

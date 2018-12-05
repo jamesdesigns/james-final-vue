@@ -228,7 +228,7 @@ export default {
   margin-top:5%;
 }
 .mycontainer {
-  margin-left:5%;
-  margin-right: 5%;
+  margin-left:12%;
+  margin-right: 12%;
 }
 </style>
