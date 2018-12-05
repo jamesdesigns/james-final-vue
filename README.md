@@ -19,6 +19,8 @@ This is all the requirements for the Final Vue Project.
 ### User input form with validation
 
 ### Custom directive developed and used
+Custom directives are used to create the bottom footer on each page of this application. 
+You can find the custom directive in the main.js file on line 13-30
 
 ### Animation(s) and Transition(s) used
 
