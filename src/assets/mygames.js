@@ -1,4 +1,4 @@
-export const videogames = [
+[
 {"title": "Aion","setting":"Fantasy","subscription_model":"Free-to-play","initial_release_date":"2008"},
 {"title": "Ashen Empires","setting":"Fantasy","subscription_model":"Freemium","initial_release_date":"2002"},
 {"title": "Battlestar Galactica Online","setting":"Science fiction","subscription_model":"Free-to-play","initial_release_date":"2011"},
@@ -14,7 +14,7 @@ export const videogames = [
 {"title": "Star Wars: The Old Republic","setting":"Science fiction","subscription_model":"Freemium","initial_release_date":"2011"},
 {"title": "Tera","setting":"True Action Combat","subscription_model":"Freemium","initial_release_date":"2011"},
 {"title": "Ultima Online","setting":"Medieval Fantasy","subscription_model":"Free-to-play","initial_release_date":"1997"},
-{"title": "WildStar","setting":"Fantasy and Science fiction","subscription_model":"Free-to-play","initial_release_date":"2014"},
+{"title": "WildStar","setting":"Fantasy/Science fiction","subscription_model":"Free-to-play","initial_release_date":"2014"},
 {"title": "World of Warcraft","setting":"Fantasy","subscription_model":"Pay-to-play","initial_release_date":"2004"}
 ]
 		
