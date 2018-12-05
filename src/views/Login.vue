@@ -84,8 +84,7 @@
         'Rookie',
         'Gets the Job Done',
         'Proficient',
-        'Absolute Dominator',
-        'Other'
+        'Absolute Dominator'
       ],
      
       checkbox: false
