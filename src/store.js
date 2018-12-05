@@ -17,7 +17,7 @@ export default new Vuex.Store({
 export default new Vuex.Store({
   state: {
     user: {
-      username: '',
+      username: 'Online Player',
       email: '',
       password: '',
       select: ''
@@ -36,8 +36,8 @@ export default new Vuex.Store({
   actions: {
     userLoggedIn({commit}, user) {
       commit('storeUser', user)
-      // router.replace('/')
-      router.replace('App.vue')
+       router.replace('/')
+      // router.replace('App.vue')
     }
   }
 });
