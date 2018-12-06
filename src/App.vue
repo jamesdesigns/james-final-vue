@@ -4,9 +4,9 @@
     <div class="plyrStat" v-highlight:background.delayed="'#58bdbb'">
       <p></p>
       <p>
-        Team Leader: {{ userName }}<br>
-        Players: <br>
-        Game Selected: 
+        Team Leader: {{ userName }} |
+        Players: 10   |
+        Game Selected: World of Warcraft
         </p>
         </div>
   </div>
@@ -36,8 +36,8 @@ export default {
   color: #2c3e50;
 }
 #nav {
-  padding: 30px;
-}
+  margin-left: 30px; 
+  }
 #nav a {
   font-weight: bold;
   color: #ffffff;
@@ -50,10 +50,14 @@ export default {
 .plyrStat {
   display: block;
   width: 100%;
-  height: 150px;
+  height: 50px;
   color: #fff;
   font-weight: bold;
-  font-size: 130%;
-  padding: 20px;
+  font-size: 110%;
+  padding: 15px 0 10px 0;
+  text-align:left;
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }
 </style>

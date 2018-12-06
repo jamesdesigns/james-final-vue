@@ -11,7 +11,8 @@
 <!-- New Stepper -->
 <div class="mycontainer">
 <v-stepper v-model="e6" vertical>
-    <v-stepper-step :complete="e6 > 1" step="1">
+   <!-- <v-stepper-step :complete="e6 > 1" step="1"> -->
+     <v-stepper-step :complete="e6 > 1" step="1">
       Choose a Game 
       <small>Choose the games you want to play.</small>
     </v-stepper-step>
@@ -149,7 +150,8 @@
     <v-stepper-step step="4">Get Approved</v-stepper-step>
     <v-stepper-content step="4">
       <v-card color="white" class="mb-5" height="200px"></v-card>
-      <v-btn color="pink lighten-2" @click="e6 = 1">Send Request</v-btn>
+       <v-btn color="pink lighten-2" @click="e6 = 1">Send Request</v-btn>
+      <!-- <v-btn color="pink lighten-2" @click="sendRequest">Send Request</v-btn> -->
       <v-btn flat>Cancel</v-btn>
     </v-stepper-content>
   </v-stepper>
@@ -183,6 +185,11 @@ export default {
     userName() {
       return this.$store.getters.userName;
     }
+  },
+  methods: {
+      sendRequest: function() {
+       alert('Hello ' + this.name + '!')
+    }
   }
 };
 </script>
@@ -190,7 +197,7 @@ export default {
 
 <style>
 .home {
-  margin-top:5%;
+ /* margin-top:5%; */
 }
 .mycontainer {
   margin-left:12%;

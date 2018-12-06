@@ -12,7 +12,7 @@
 <style>
 h1 {
   color: #000;
-  margin-top: 9%;
+  margin-top: 7%;
   margin-bottom: 1%;
 }
 p {

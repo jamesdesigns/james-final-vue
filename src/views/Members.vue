@@ -46,8 +46,9 @@
    <v-flex v-for="i in 4" :key="i">
   <div>
       <v-card width="200px">
-       <v-img :src="`https://uinames.com/api/photos/female/${i}.jpg`" alt="image" width="200px" height="200px">
-        
+      <!-- <v-img :src="`https://uinames.com/api/photos/female/${i}.jpg`" alt="image" width="200px" height="200px"> -->
+       <!-- <v-img :src="`https://uinames.com/api/${i}.jpg`" alt="image" width="200px" height="200px">  -->
+       <v-img :src="`https://randomuser.me/api/portraits/women/${i}.jpg`" alt="image" width="200px" height="200px">
         </v-img>
         <v-card-title> 
             <ul>
@@ -86,15 +87,16 @@ export default {
     // New example
     mounted() {
         axios
-            .get('https://uinames.com/api/?ext')
-          // .get('https://randomuser.me/api/?results=10&name&gender&email')
+          //  .get('https://uinames.com/api/?ext')
+           .get('https://randomuser.me/api/?inc=gender,name,picture')
             .then(response => (this.info = response))
     },
     methods: {
         requestMember() {
             return axios
             // Original UINAMES used
-             .get('https://uinames.com/api/?ext')
+            // .get('https://uinames.com/api/?ext')
+            .get('https://randomuser.me/api/?inc=gender,name,picture')
             .then(function(response) {
                 // Original example
                 // this.courses.push(response.data.results[0].name)

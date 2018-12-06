@@ -1,11 +1,11 @@
 # james-final-vue
 
-## TeamUp | Building a Team of Game Players
+## TeamUp | Building a Team 
 https://inspiring-bassi-b7efe0.netlify.com/#/
 
 ## Required Documents
 This is all the requirements for the Final Vue Project.
-It is a simple app that helps you build a team based on members who sign up and login to the application.
+It is a simple app that helps you build a team based on members who sign up and login to the application. You will find everything that was included to make this app.
 
 ### Conditional logic and array methods render large lists
 
@@ -49,6 +49,7 @@ This involves the file router.js.
 [Router JS File](https://github.com/jamesdesigns/james-final-vue/blob/master/src/router.js)
 
 Setting up the 4 routes also resides in the Header.vue, where it sets up the menu navigation
+
 [Header Component](https://github.com/jamesdesigns/james-final-vue/blob/master/src/components/Header.vue)
 
 ### State managed using Vuex
