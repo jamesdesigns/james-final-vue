@@ -1,8 +1,8 @@
 <template>
   <div id="app" class="hello">
    <img width="960px" height="300" src="https://media.giphy.com/media/oxU7gskFCKEBixYYR7/giphy.gif" alt="Games" />
-
-    <h1 class="animated bounceIn">{{ msg }}</h1>
+   
+    <h1 class="animated bounceIn">{{ msg }}</h1> 
     <p>
       You now have the opportunity to choose the best players to team up with. Choose one of many massively multiplayer online role playing games (MMPORG) to play. Select a few players you want to team up with. Get your request approved from players.
       Then you will form an unstoppable team that will help you dominate your opponents and start winning.

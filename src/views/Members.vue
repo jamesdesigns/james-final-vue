@@ -8,18 +8,20 @@
     justify-center
     ma-0
     >
-   <v-flex v-for="i in 4" :key="i">
+   <v-flex v-for='(item, i) in info' :key="i">
   <div>
       <v-card width="200px">
-       <v-img :src="`https://randomuser.me/api/portraits/men/${i + 20}.jpg`" alt="image" width="200px" height="200px">
-        
+      <!-- <v-img :src="`https://randomuser.me/api/portraits/men/${i + 20}.jpg`" alt="image" width="200px" height="200px"> -->
+        <!-- <v-img :src="`https://uinames.com/api/photos/female/${i}.jpg`" alt="image" width="200px" height="200px"> -->
+        <v-img :src="item.photo" alt="image" width="200px" height="200px">
         </v-img>
         <v-card-title>
             <ul>
-                <li class="headline mb-0">{{ info.data.name }}</li>
-                <li>Age: {{ info.data.age }}</li>
-                <li>Gender: {{ info.data.gender }}</li>
-                <!-- <li>Email: {{ info.data.email }}</li> -->
+                <li class="headline mb-0">{{ item.name }}</li>
+                <li>Age: {{ item.age }}</li>
+                <li>Gender: {{ item.gender }}</li>
+                <!-- <li>Gender: {{ info.data.gender }}</li> -->
+
             </ul>
           
         </v-card-title>
@@ -47,8 +49,8 @@
   <div>
       <v-card width="200px">
       <!-- <v-img :src="`https://uinames.com/api/photos/female/${i}.jpg`" alt="image" width="200px" height="200px"> -->
-       <!-- <v-img :src="`https://uinames.com/api/${i}.jpg`" alt="image" width="200px" height="200px">  -->
-       <v-img :src="`https://randomuser.me/api/portraits/women/${i}.jpg`" alt="image" width="200px" height="200px">
+        <v-img :src="info.data.photo" alt="image" width="200px" height="200px">
+       <!-- <v-img :src="`https://randomuser.me/api/portraits/women/${i}.jpg`" alt="image" width="200px" height="200px"> -->
         </v-img>
         <v-card-title> 
             <ul>
@@ -87,20 +89,20 @@ export default {
     // New example
     mounted() {
         axios
-          //  .get('https://uinames.com/api/?ext')
-           .get('https://randomuser.me/api/?inc=gender,name,picture')
+            .get('https://uinames.com/api/?ext')
+           // .get('https://randomuser.me/api/?inc=gender,name,picture')
             .then(response => (this.info = response))
     },
     methods: {
         requestMember() {
             return axios
             // Original UINAMES used
-            // .get('https://uinames.com/api/?ext')
-            .get('https://randomuser.me/api/?inc=gender,name,picture')
+             .get('https://uinames.com/api/?ext')
+            // .get('https://randomuser.me/api/?inc=gender,name,picture')
             .then(function(response) {
                 // Original example
                 // this.courses.push(response.data.results[0].name)
-                this.info.push(response.data.results[50].name)
+                this.info.push(response.data.results[i].name)
             })
             .catch(function(error) {
                 console.log(error)

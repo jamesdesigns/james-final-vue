@@ -2,12 +2,13 @@
   <div class="home">
    <!-- Place a New logo here for the Home Page --> 
    <!-- <img alt="TeamUp logo" src="../assets/logo.png"> -->
-    
-    <HelloWorld msg="Build a Team"/>
+    <!-- Below I am taking this out to replace the "Weclome..." greeting -->
+   <HelloWorld msg="Build a Team"/> 
     <!-- ADD NEW STATE MANAGEMENT: USER:  -->
  <div class="start">
   <h2>Welcome {{ userName }}!</h2>
 </div>
+
 <!-- New Stepper -->
 <div class="mycontainer">
 <v-stepper v-model="e6" vertical>
@@ -57,33 +58,32 @@
     <v-stepper-step :complete="e6 > 2" step="2">Select Players
       <small>Select players who will benefit you the most in forming an unbeatable team.</small>
 <!-- New Drag and Drop -->
-<!-- <h3>Drag and Drop</h3>   
-      <div v-drag-and-drop:options="options" class="drag-wrapper">   -->
+<!-- <h3>Drag and Drop</h3>  -->
+    <!--  <div v-for="(items, i) in info" :key="i" class="drag-wrapper"> -->
         <!-- END OF NEW ADDED -->
-<!--  <ul>
-    <li>Member 1</li>
-    <li>Member 2</li>
-    <li>Member 3</li>
-    <li>Member 4</li>
-    <li>Member 5</li>
-    <li>Member 6</li>
+ <!-- <ul>
+    <li>{{ items.name }}</li>
+    <li>{{ items.name }}</li>
   </ul>
-  -->
-<!-- </div> -->
+  
+</div> -->
 <!-- End of Drag and Drop -->
     </v-stepper-step>
 
     <v-stepper-content step="2">
-     <v-card color="grey lighten-1" class="mb-5" height="250px">
+     <v-card color="white" class="mb-5" height="250px">
        
 <!-- NEW ADDED -->
-<v-layout row>
+<v-layout 
+row
+>
     <v-flex xs12>
      <!-- <v-card> -->
         <v-divider></v-divider>
         <v-list
           subheader
           two-line
+           v-for="(item, i) in info" :key="i"
         >
 
           <v-list-tile @click="">
@@ -92,41 +92,8 @@
             </v-list-tile-action>
 
             <v-list-tile-content @click="notifications = !notifications">
-              <v-list-tile-title>Mark Jensen</v-list-tile-title>
-              <v-list-tile-sub-title>Experience Level: Absolute Dominator</v-list-tile-sub-title>
-            </v-list-tile-content>
-          </v-list-tile>
-
-          <v-list-tile @click="">
-            <v-list-tile-action>
-              <v-checkbox v-model="sound"></v-checkbox>
-            </v-list-tile-action>
-
-            <v-list-tile-content @click="sound = !sound">
-              <v-list-tile-title>John Varanakis</v-list-tile-title>
-              <v-list-tile-sub-title>Experience Level: Newbie</v-list-tile-sub-title>
-            </v-list-tile-content>
-          </v-list-tile>
-
-          <v-list-tile @click="">
-            <v-list-tile-action>
-              <v-checkbox v-model="video"></v-checkbox>
-            </v-list-tile-action>
-
-            <v-list-tile-content @click="video = !video">
-              <v-list-tile-title>Adam Rupp</v-list-tile-title>
-              <v-list-tile-sub-title>Experience Level: Pro Level</v-list-tile-sub-title>
-            </v-list-tile-content>
-          </v-list-tile>
-
-          <v-list-tile @click="">
-            <v-list-tile-action>
-              <v-checkbox v-model="invites"></v-checkbox>
-            </v-list-tile-action>
-
-            <v-list-tile-content @click="invites = !invites">
-              <v-list-tile-title>Allison Love</v-list-tile-title>
-              <v-list-tile-sub-title>Experience Level: Explorer</v-list-tile-sub-title>
+              <v-list-tile-title>{{ item.name }}</v-list-tile-title>
+              <v-list-tile-sub-title>Age: {{ item.age }}</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
 
@@ -142,14 +109,14 @@
     <v-stepper-step :complete="e6 > 3" step="3">View Selected Game and Players</v-stepper-step>
 
     <v-stepper-content step="3">
-      <v-card color="white" class="mb-5" height="200px"></v-card>
+      <v-card color="white" class="mb-5" height="100px"></v-card>
       <v-btn color="pink lighten-2" @click="e6 = 4">Continue</v-btn>
       <v-btn flat>Cancel</v-btn>
     </v-stepper-content>
 
     <v-stepper-step step="4">Get Approved</v-stepper-step>
     <v-stepper-content step="4">
-      <v-card color="white" class="mb-5" height="200px"></v-card>
+      <v-card color="white" class="mb-5" height="70px"></v-card>
        <v-btn color="pink lighten-2" @click="e6 = 1">Send Request</v-btn>
       <!-- <v-btn color="pink lighten-2" @click="sendRequest">Send Request</v-btn> -->
       <v-btn flat>Cancel</v-btn>
@@ -172,7 +139,9 @@ export default {
     data () {
       return {
        allGames: videogames,
-        e6: 1
+        e6: 1,
+        info: [],
+        ourQuery: 'James',
       }
     },
   name: "home",
@@ -186,11 +155,35 @@ export default {
       return this.$store.getters.userName;
     }
   },
+    // New example
+    // mounted() {
+    //     axios
+    //         .get('https://uinames.com/api/?ext')
+    //        // .get('https://randomuser.me/api/?inc=gender,name,picture')
+    //         .then(response => (this.info = response))
+    // },
+
   methods: {
       sendRequest: function() {
        alert('Hello ' + this.name + '!')
     }
-  }
+  }, 
+          requestMember(myMember) {
+            this.ourQuery = myMember
+             axios
+            // Original UINAMES used
+             .get(`https://uinames.com/api/?ext`)
+            // .get('https://randomuser.me/api/?inc=gender,name,picture')
+            .then(function (response) {
+                console.log(response.data.ext);
+                this.info = response.data.ext;
+              //this.info.push(response.data.results[i].name)
+              //  this.info = response.data.ext
+            })
+            .catch(function(error) {
+                console.log(error)
+            })
+        }
 };
 </script>
 

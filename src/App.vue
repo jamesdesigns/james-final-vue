@@ -1,6 +1,7 @@
 <template>
   <div id="app">
       <main-header></main-header>
+
     <div class="plyrStat" v-highlight:background.delayed="'#58bdbb'">
       <p></p>
       <p>
@@ -24,6 +25,7 @@ export default {
       return this.$store.getters.userName;
     }
   }
+ 
 }
 </script>
 
