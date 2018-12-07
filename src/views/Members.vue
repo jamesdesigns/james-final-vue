@@ -37,7 +37,7 @@
   </v-layout>
   </v-container>
 
-   
+  
    <v-container fluid>
     <v-layout 
     row
@@ -100,8 +100,6 @@ export default {
              .get('https://uinames.com/api/?ext')
             // .get('https://randomuser.me/api/?inc=gender,name,picture')
             .then(function(response) {
-                // Original example
-                // this.courses.push(response.data.results[0].name)
                 this.info.push(response.data.results[i].name)
             })
             .catch(function(error) {

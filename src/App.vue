@@ -5,8 +5,9 @@
     <div class="plyrStat" v-highlight:background.delayed="'#58bdbb'">
       <p></p>
       <p>
-        Team Leader: {{ userName }} |
-        Players: 10   |
+        Team Leader: {{ userName }} <br>
+        Game Experience: {{ select }} <br>
+        Players: 10  <br>
         Game Selected: World of Warcraft
         </p>
         </div>
@@ -52,13 +53,13 @@ export default {
 .plyrStat {
   display: block;
   width: 100%;
-  height: 50px;
+  height: 110px;
   color: #fff;
   font-weight: bold;
   font-size: 110%;
   padding: 15px 0 10px 0;
   text-align:left;
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
 }
