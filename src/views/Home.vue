@@ -77,13 +77,12 @@
 <v-layout 
 row
 >
-    <v-flex xs12>
+    <v-flex xs12 v-for="(i, index) in gameInfo" :key="index">
      <!-- <v-card> -->
         <v-divider></v-divider>
         <v-list
           subheader
           two-line
-           v-for="(item, i) in info" :key="i"
         >
 
           <v-list-tile @click="" v-model="sendGame">
@@ -92,8 +91,8 @@ row
             </v-list-tile-action>
 
             <v-list-tile-content @click="notifications = !notifications">
-              <v-list-tile-title>{{ item.name }}</v-list-tile-title>
-              <v-list-tile-sub-title>Age: {{ item.age }}</v-list-tile-sub-title>
+              <v-list-tile-title>{{ i.name }}</v-list-tile-title>
+              <v-list-tile-sub-title>Age: {{ i.age }}</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
 
@@ -106,7 +105,7 @@ row
       <v-btn flat>Cancel</v-btn>
     </v-stepper-content>
 
-    <v-stepper-step :complete="e6 > 3" step="3">View Selected Game and Players</v-stepper-step>
+    <v-stepper-step :complete="e6 > 3" step="3">Send Request</v-stepper-step>
 
     <v-stepper-content step="3">
       <v-card color="white" class="mb-5" height="100px">
@@ -118,14 +117,13 @@ row
       <v-btn flat>Cancel</v-btn>
     </v-stepper-content>
 
-    <v-stepper-step step="4">Get Approved</v-stepper-step>
+    <!-- <v-stepper-step step="4">Get Approved</v-stepper-step>
     <v-stepper-content step="4">
       <v-card color="white" class="mb-5" height="70px"></v-card>
        <v-btn color="pink lighten-2" @click="e6 = 1">Send Request</v-btn>
-      <!-- <v-btn color="pink lighten-2" @click="sendRequest">Send Request</v-btn> -->
       <v-btn flat>Cancel</v-btn>
-    </v-stepper-content>
-  </v-stepper>
+    </v-stepper-content> -->
+  </v-stepper> 
 
 <!-- End of Stepper -->
 </div> <!-- End of my container -->
@@ -144,7 +142,7 @@ export default {
       return {
        allGames: videogames,
         e6: 1,
-        info: [],
+        gameInfo: [],
         sendGame: [],
         ourQuery: 'James',
       }
@@ -168,27 +166,17 @@ export default {
     //         .then(response => (this.info = response))
     // },
 
-  methods: {
-      sendRequest: function() {
-       alert('Hello ' + this.name + '!')
-    }
-  }, 
-          requestMember(myMember) {
-            this.ourQuery = myMember
-             axios
-            // Original UINAMES used
-             .get(`https://uinames.com/api/?ext`)
-            // .get('https://randomuser.me/api/?inc=gender,name,picture')
-            .then(function (response) {
-                console.log(response.data.ext);
-                this.info = response.data.ext;
-              //this.info.push(response.data.results[i].name)
-              //  this.info = response.data.ext
-            })
-            .catch(function(error) {
-                console.log(error)
-            })
-        }
+  // methods: {
+  //     sendRequest: function() {
+  //      alert('Hello ' + this.name + '!')
+  //   }
+  // }, 
+    mounted() {
+         axios
+             .get('https://uinames.com/api/?amount=5&ext')
+    //        // .get('https://randomuser.me/api/?inc=gender,name,picture')
+             .then(response => (this.gameInfo = response.data))
+     },
 };
 </script>
 
