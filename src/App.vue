@@ -6,8 +6,8 @@
       <p>
         Team Leader: {{ userName }} <br>
         Game Experience: {{ level }} <br>
-        Players: 10  <br>
-        Game Selected: World of Warcraft
+        Players: {{ players }}  <br>
+        Game Selected: {{ games }}
         </p>
         </div>
   </div>

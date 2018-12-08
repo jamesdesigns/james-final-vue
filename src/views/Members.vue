@@ -116,8 +116,6 @@ export default {
 }
 </script>
 <style>
-ul {
-}
 ul li {
     list-style-type: none;
     text-align:left;

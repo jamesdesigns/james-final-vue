@@ -29,12 +29,12 @@
           subheader
           two-line
         >
-          <v-list-tile @click="" v-for="game in allGames" :key="game.title">
+          <v-list-tile @click="" v-for="game in allGames" :key="game.title" v-model="sendGame">
             <v-list-tile-action>
               <v-checkbox v-model="notifications"></v-checkbox>
             </v-list-tile-action>
 
-            <v-list-tile-content @click="notifications = !notifications" >
+            <v-list-tile-content @click="notifications = !notifications">
               <v-list-tile-title>
                 {{ game.title }}
                 </v-list-tile-title>
@@ -86,7 +86,7 @@ row
            v-for="(item, i) in info" :key="i"
         >
 
-          <v-list-tile @click="">
+          <v-list-tile @click="" v-model="sendGame">
             <v-list-tile-action>
               <v-checkbox v-model="notifications"></v-checkbox>
             </v-list-tile-action>
@@ -109,7 +109,11 @@ row
     <v-stepper-step :complete="e6 > 3" step="3">View Selected Game and Players</v-stepper-step>
 
     <v-stepper-content step="3">
-      <v-card color="white" class="mb-5" height="100px"></v-card>
+      <v-card color="white" class="mb-5" height="100px">
+        <ul>
+          <li v-for="myitem in sendGame">{{ myitem }}</li>
+          </ul>
+      </v-card>
       <v-btn color="pink lighten-2" @click="e6 = 4">Continue</v-btn>
       <v-btn flat>Cancel</v-btn>
     </v-stepper-content>
@@ -141,6 +145,7 @@ export default {
        allGames: videogames,
         e6: 1,
         info: [],
+        sendGame: [],
         ourQuery: 'James',
       }
     },
@@ -189,9 +194,6 @@ export default {
 
 
 <style>
-.home {
- /* margin-top:5%; */
-}
 .mycontainer {
   margin-left:12%;
   margin-right: 12%;
