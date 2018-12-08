@@ -3,10 +3,9 @@
       <main-header></main-header>
 
     <div class="plyrStat" v-highlight:background.delayed="'#58bdbb'">
-      <p></p>
       <p>
         Team Leader: {{ userName }} <br>
-        Game Experience: {{ select }} <br>
+        Game Experience: {{ level }} <br>
         Players: 10  <br>
         Game Selected: World of Warcraft
         </p>
@@ -24,6 +23,9 @@ export default {
   computed: {
     userName() {
       return this.$store.getters.userName;
+    },
+    level() {
+      return this.$store.getters.level;
     }
   }
  
@@ -53,14 +55,20 @@ export default {
 .plyrStat {
   display: block;
   width: 100%;
-  height: 110px;
+  height: 120px;
   color: #fff;
   font-weight: bold;
   font-size: 110%;
   padding: 15px 0 10px 0;
   text-align:left;
-  position: relative;
+  position: fixed;
   bottom: 0;
   left: 0;
+}
+
+.plyrStat p {
+  margin-left: 2.5%;
+    border-left: 2px solid #fff;
+    padding-left: 20px;
 }
 </style>

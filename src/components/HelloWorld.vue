@@ -1,6 +1,8 @@
 <template>
   <div id="app" class="hello">
-   <img width="960px" height="300" src="https://media.giphy.com/media/oxU7gskFCKEBixYYR7/giphy.gif" alt="Games" />
+  
+  <!-- <img width="960px" height="300" src="https://media.giphy.com/media/oxU7gskFCKEBixYYR7/giphy.gif" alt="Games" /> -->
+  <img width="1330px" height="477px" src="../assets/wow.jpg" alt="Characters from World of Warcraft game" />
    
     <h1 class="animated bounceIn">{{ msg }}</h1> 
     <p>

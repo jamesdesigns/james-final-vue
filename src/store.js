@@ -27,6 +27,9 @@ export default new Vuex.Store({
     userName(state){
       return state.user.username
     },
+    level(state){
+      return state.user.select
+    },
   },
   mutations: {
     storeUser(state, user){
@@ -38,6 +41,6 @@ export default new Vuex.Store({
       commit('storeUser', user)
        router.replace('/')
       // router.replace('App.vue')
+      }
     }
-  }
-});
+  });
