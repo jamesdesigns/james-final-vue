@@ -56,6 +56,9 @@ Setting up the 4 routes also resides in the Header.vue, where it sets up the men
 [Header Component](https://github.com/jamesdesigns/james-final-vue/blob/master/src/components/Header.vue)
 
 ### State managed using Vuex
+For this task, I set up the login form to output the Username/Game Experience Level to show up in the footer. You can see this on each page of the application on the bottom of the browser.
+
+[State Managed using Vuex](https://github.com/jamesdesigns/james-final-vue/blob/master/src/store.js)
 
 ### App structured, documented, and deployed
 
