@@ -12,8 +12,17 @@
         </v-tabs>
       </div>
         </v-toolbar>
+
+      <transition
+        name="fade"
+        mode="out-in"
+      >
         <router-view/>
+
+      </transition>
+
     </v-app>
+
  </div>   
 </template>
 <script>

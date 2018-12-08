@@ -8,19 +8,22 @@
     justify-center
     ma-0
     >
-   <v-flex v-for='(item, i) in info' :key="i">
+    <v-flex v-for="i in info" :key="i">
+   <!-- <v-flex v-for='(item, i) in info' :key="i"> -->
   <div>
       <v-card width="200px">
       <!-- <v-img :src="`https://randomuser.me/api/portraits/men/${i + 20}.jpg`" alt="image" width="200px" height="200px"> -->
         <!-- <v-img :src="`https://uinames.com/api/photos/female/${i}.jpg`" alt="image" width="200px" height="200px"> -->
-        <v-img :src="item.photo" alt="image" width="200px" height="200px">
+        <v-img :src="info.data.photo" alt="image" width="200px" height="200px">
         </v-img>
         <v-card-title>
             <ul>
-                <li class="headline mb-0">{{ item.name }}</li>
+                <li class="headline mb-0">{{ info.data.name }}</li>
+                <li>Age: {{ info.data.age }}
+                <li>Gender: {{ info.data.gender }}</li>    
+                <!-- <li class="headline mb-0">{{ item.name }}</li>
                 <li>Age: {{ item.age }}</li>
-                <li>Gender: {{ item.gender }}</li>
-                <!-- <li>Gender: {{ info.data.gender }}</li> -->
+                <li>Gender: {{ item.gender }}</li> -->
 
             </ul>
           
@@ -38,6 +41,8 @@
   </v-container>
 
   
+
+  
    <v-container fluid>
     <v-layout 
     row
@@ -45,7 +50,8 @@
     justify-center
     ma-0
     >
-   <v-flex v-for="i in 4" :key="i">
+    <v-flex v-for="i in info" :key="i">
+   <!-- <v-flex v-for="i in 4" :key="i"> -->
   <div>
       <v-card width="200px">
       <!-- <v-img :src="`https://uinames.com/api/photos/female/${i}.jpg`" alt="image" width="200px" height="200px"> -->
@@ -100,7 +106,7 @@ export default {
              .get('https://uinames.com/api/?ext')
             // .get('https://randomuser.me/api/?inc=gender,name,picture')
             .then(function(response) {
-                this.info.push(response.data.results[i].name)
+                this.info.push(response.data.results[4].name)
             })
             .catch(function(error) {
                 console.log(error)

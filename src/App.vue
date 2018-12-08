@@ -68,7 +68,23 @@ export default {
 
 .plyrStat p {
   margin-left: 2.5%;
-    border-left: 2px solid #fff;
+    border-left: 3px solid #fff;
     padding-left: 20px;
+}
+
+
+
+
+
+.fade-enter-active,
+.fade-leave-active {
+  transition-duration: 0.3s;
+  transition-property: opacity;
+  transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0
 }
 </style>
