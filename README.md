@@ -35,7 +35,10 @@ You can find the custom directive in the main.js file on line 13-30
 
 ### Animation(s) and Transition(s) used
 Used the Animate.css for all the page titles on each page. The animation is called bounceIn.
-There may be extra animations included as this project updates.
+
+The Transition is implemented in the Header.vue. You can see this following code here:
+
+[Transition](https://github.com/jamesdesigns/james-final-vue/blob/master/src/components/Header.vue)
 
 ### App connects to a server using HTTP
 This app is connecting to the RandomUser.me api. You can find this on the Members.vue
