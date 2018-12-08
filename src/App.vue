@@ -72,10 +72,6 @@ export default {
     padding-left: 20px;
 }
 
-
-
-
-
 .fade-enter-active,
 .fade-leave-active {
   transition-duration: 0.3s;
