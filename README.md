@@ -41,7 +41,7 @@ The Transition is implemented in the Header.vue. You can see this following code
 [Transition](https://github.com/jamesdesigns/james-final-vue/blob/master/src/components/Header.vue)
 
 ### App connects to a server using HTTP
-This app is connecting to the RandomUser.me api. You can find this on the Members.vue
+This app is connecting to the UInames.com api. You can find this on the Members.vue
 
 [Connecting to the API](https://github.com/jamesdesigns/james-final-vue/blob/master/src/views/Members.vue)
 
