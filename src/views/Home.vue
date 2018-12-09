@@ -1,10 +1,7 @@
 <template>
   <div class="home">
-   <!-- Place a New logo here for the Home Page --> 
-   <!-- <img alt="TeamUp logo" src="../assets/logo.png"> -->
-    <!-- Below I am taking this out to replace the "Weclome..." greeting -->
   <HelloWorld msg="Build a Team"/> 
-    <!-- ADD NEW STATE MANAGEMENT: USER:  -->
+ <!-- ADD NEW STATE MANAGEMENT: USER:  -->
  <div class="start">
   <h2>Welcome {{ userName }}!</h2>
 </div>
@@ -29,12 +26,12 @@
           subheader
           two-line
         >
-          <v-list-tile @click="" v-for="game in allGames" :key="game.title" v-model="sendGame">
+          <v-list-tile @click="" v-for="game in allGames" :key="game.title">
             <v-list-tile-action>
-              <v-checkbox v-model="notifications"></v-checkbox>
+              <v-checkbox v-model="selectedGames"></v-checkbox>
             </v-list-tile-action>
 
-            <v-list-tile-content @click="notifications = !notifications">
+            <v-list-tile-content @click="selectedGames = !selectedGames">
               <v-list-tile-title>
                 {{ game.title }}
                 </v-list-tile-title>
@@ -57,17 +54,6 @@
 
     <v-stepper-step :complete="e6 > 2" step="2">Select Players
       <small>Select players who will benefit you the most in forming an unbeatable team.</small>
-<!-- New Drag and Drop -->
-<!-- <h3>Drag and Drop</h3>  -->
-    <!--  <div v-for="(items, i) in info" :key="i" class="drag-wrapper"> -->
-        <!-- END OF NEW ADDED -->
- <!-- <ul>
-    <li>{{ items.name }}</li>
-    <li>{{ items.name }}</li>
-  </ul>
-  
-</div> -->
-<!-- End of Drag and Drop -->
     </v-stepper-step>
 
     <v-stepper-content step="2">
@@ -142,10 +128,9 @@ export default {
     data () {
       return {
        allGames: videogames,
-        e6: 1,
-        game: [],
-        sendGame: [],
-        ourQuery: 'James',
+       e6: 1,
+       selectedGames: [],
+       sendGame: []
       }
     },
   name: "home",
@@ -159,23 +144,10 @@ export default {
       return this.$store.getters.userName;
     }
   },
-    // New example
-    // mounted() {
-    //     axios
-    //         .get('https://uinames.com/api/?ext')
-    //        // .get('https://randomuser.me/api/?inc=gender,name,picture')
-    //         .then(response => (this.info = response))
-    // },
-
-  // methods: {
-  //     sendRequest: function() {
-  //      alert('Hello ' + this.name + '!')
-  //   }
-  // }, 
     mounted() {
          axios
              .get('https://uinames.com/api/?amount=5&ext')
-    //        // .get('https://randomuser.me/api/?inc=gender,name,picture')
+          // .get('https://randomuser.me/api/?inc=gender,name,picture')
              .then(response => (this.game = response.data))
      },
 };
@@ -191,7 +163,6 @@ export default {
 h2 {
   color: #5cc1a6;
   margin-bottom: 20px;
-  margin-top: -10px;
 }
 .start {
   margin-left: 35%;

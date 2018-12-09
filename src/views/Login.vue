@@ -1,5 +1,5 @@
 <template>
-<div>
+<div class="login">
 
 
  <v-form ref="form" v-model="valid" lazy-validation>
@@ -134,7 +134,7 @@
     margin-left: -20px;
     margin-bottom: 150px;
 }
-h1 {
-    margin-top:7%;
+.login {
+    margin-top: 8%;
 }
 </style>
