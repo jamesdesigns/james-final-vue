@@ -55,11 +55,11 @@ export default {
 .plyrStat {
   display: block;
   width: 100%;
-  height: 100px;
+  height: 130px;
   color: #fff;
   font-weight: bold;
   font-size: 110%;
-  padding: 15px 0 10px 0;
+  padding: 18px 0 15px 0;
   text-align:left;
   position: fixed;
   bottom: 0;
@@ -68,8 +68,8 @@ export default {
 
 .plyrStat p {
   margin-left: 2.5%;
-    border-left: 3px solid #fff;
-    padding-left: 20px;
+  border-left: 3px solid #fff;
+  padding-left: 20px;
 }
 
 .fade-enter-active,
