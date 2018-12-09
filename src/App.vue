@@ -55,11 +55,11 @@ export default {
 .plyrStat {
   display: block;
   width: 100%;
-  height: 120px;
+  height: 100px;
   color: #fff;
   font-weight: bold;
   font-size: 110%;
-  padding: 20px 0 10px 0;
+  padding: 15px 0 10px 0;
   text-align:left;
   position: fixed;
   bottom: 0;

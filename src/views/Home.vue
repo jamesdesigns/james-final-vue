@@ -71,28 +71,29 @@
     </v-stepper-step>
 
     <v-stepper-content step="2">
-     <v-card color="white" class="mb-5" height="250px">
+     <v-card color="white" class="mb-5" height="360px">
        
 <!-- NEW ADDED -->
 <v-layout 
 row
 >
-    <v-flex xs12 v-for="(i, index) in gameInfo" :key="index">
+    <v-flex xs12>
      <!-- <v-card> -->
         <v-divider></v-divider>
         <v-list
           subheader
           two-line
+          v-for="(i, index) in game" :key="index"
         >
 
-          <v-list-tile @click="" v-model="sendGame">
+          <v-list-tile @click="">
             <v-list-tile-action>
               <v-checkbox v-model="notifications"></v-checkbox>
             </v-list-tile-action>
 
             <v-list-tile-content @click="notifications = !notifications">
               <v-list-tile-title>{{ i.name }}</v-list-tile-title>
-              <v-list-tile-sub-title>Age: {{ i.age }}</v-list-tile-sub-title>
+              <v-list-tile-sub-title>Age: {{ i.age }}  |  Gender:  {{ i.gender }}</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
 
@@ -108,7 +109,7 @@ row
     <v-stepper-step :complete="e6 > 3" step="3">Send Request</v-stepper-step>
 
     <v-stepper-content step="3">
-      <v-card color="white" class="mb-5" height="100px">
+      <v-card color="white" class="mb-5" height="150px">
         <ul>
           <li v-for="myitem in sendGame">{{ myitem }}</li>
           </ul>
@@ -117,12 +118,12 @@ row
       <v-btn flat>Cancel</v-btn>
     </v-stepper-content>
 
-    <!-- <v-stepper-step step="4">Get Approved</v-stepper-step>
+     <v-stepper-step step="4">Get Approved</v-stepper-step>
     <v-stepper-content step="4">
-      <v-card color="white" class="mb-5" height="70px"></v-card>
+      <v-card color="white" class="mb-5" height="90px"></v-card>
        <v-btn color="pink lighten-2" @click="e6 = 1">Send Request</v-btn>
       <v-btn flat>Cancel</v-btn>
-    </v-stepper-content> -->
+    </v-stepper-content>
   </v-stepper> 
 
 <!-- End of Stepper -->
@@ -135,14 +136,14 @@ row
 // @ is an alias to /src
 import HelloWorld from "@/components/HelloWorld.vue";
 import { videogames } from '../assets/videogames'
-
+import axios from 'axios'
 
 export default {
     data () {
       return {
        allGames: videogames,
         e6: 1,
-        gameInfo: [],
+        game: [],
         sendGame: [],
         ourQuery: 'James',
       }
@@ -175,7 +176,7 @@ export default {
          axios
              .get('https://uinames.com/api/?amount=5&ext')
     //        // .get('https://randomuser.me/api/?inc=gender,name,picture')
-             .then(response => (this.gameInfo = response.data))
+             .then(response => (this.game = response.data))
      },
 };
 </script>
@@ -185,6 +186,7 @@ export default {
 .mycontainer {
   margin-left:12%;
   margin-right: 12%;
+  margin-bottom:100px;
 }
 h2 {
   color: #5cc1a6;
