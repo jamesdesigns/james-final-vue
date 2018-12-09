@@ -81,9 +81,9 @@
       select: null,
       items: [
         'Newbie',
-        'Rookie',
-        'Gets the Job Done',
-        'Proficient',
+        'Average',
+        'Good',
+        'Pro',
         'Absolute Dominator'
       ],
      
@@ -132,8 +132,9 @@
     color:#f344a5;
     margin-top:5%;
     margin-left: -20px;
+    margin-bottom: 150px;
 }
 h1 {
-    margin-top:5%;
+    margin-top:7%;
 }
 </style>
