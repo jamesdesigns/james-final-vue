@@ -50,7 +50,7 @@
        
        </v-card> 
       <v-btn color="pink lighten-2" @click="e6 = 2">Continue</v-btn>
-      <v-btn flat>Cancel</v-btn>
+      <!-- <v-btn @click="cancel" flat>Cancel</v-btn> -->
     </v-stepper-content>
 
     <v-stepper-step :complete="e6 > 2" step="2">Select Players
@@ -58,7 +58,7 @@
     </v-stepper-step>
 
     <v-stepper-content step="2">
-     <v-card color="white" class="mb-5" height="360px">
+     <v-card color="white" class="mb-5">
        
 <!-- NEW ADDED -->
 <v-layout 
@@ -90,7 +90,7 @@ row
   </v-layout>
        </v-card> 
       <v-btn color="pink lighten-2" @click="e6 = 3">Continue</v-btn>
-      <v-btn flat>Cancel</v-btn>
+      <!-- <v-btn @click="cancel" flat>Cancel</v-btn> -->
     </v-stepper-content>
 
     <v-stepper-step :complete="e6 > 3" step="3">Send Request</v-stepper-step>
@@ -106,17 +106,24 @@ row
           <li v-for="(player, i) in selectedPlayers" :key="i">{{ player.name }} {{ player.surname }} | Age: {{ player.age }} | Gender: {{ player.gender }}</li>
         </ul>  
       </v-card>
-      <v-btn color="pink lighten-2" @click="e6 = 4">Continue</v-btn>
-      <v-btn flat>Cancel</v-btn>
-    </v-stepper-content>
+ <!-- NEW -->
+<v-dialog v-model="dialog" persistent max-width="490">
 
-     <v-stepper-step step="4">Get Approved</v-stepper-step>
-    <v-stepper-content step="4">
-      <v-card color="white" class="mb-5" height="90px"></v-card>
-       <v-btn color="pink lighten-2" @click="e6 = 1">Send Request</v-btn>
-      <v-btn flat>Cancel</v-btn>
+      <v-btn slot="activator" color="pink lighten-2" @click="e6 = 1">SEND REQUEST</v-btn>
+
+<v-card>
+        <v-card-title class="headline">Good Luck!</v-card-title>
+        <v-card-text>Your request has been sent. Get ready to team up and be ready to start dominating your opponents.</v-card-text>
+        <v-card-actions>
+          <v-spacer></v-spacer>
+          <!-- <v-btn color="green darken-1" flat @click="dialog = false">Disagree</v-btn> -->
+          <v-btn color="green darken-1" flat @click="dialog = false">Continue</v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+
     </v-stepper-content>
-  </v-stepper> 
+  </v-stepper>  
 
 <!-- End of Stepper -->
 </div> <!-- End of my container -->
@@ -135,6 +142,7 @@ export default {
       return {
        allGames: videogames,
        e6: 1,
+       dialog: false,
        players: [],
        selectedGames: [],
        selectedPlayers: []
@@ -151,12 +159,13 @@ export default {
       return this.$store.getters.userName;
     }
   },
+
     mounted() {
          axios
-             .get('https://uinames.com/api/?amount=5&ext')
-          // .get('https://randomuser.me/api/?inc=gender,name,picture')
+             .get('https://uinames.com/api/?amount=15&ext')
              .then(response => (this.players = response.data))
      },
+
 };
 </script>
 
@@ -178,5 +187,8 @@ h3 {
 }
 .start {
   margin-left: 35%;
+}
+.headline {
+  margin-left: 3%;
 }
 </style>
