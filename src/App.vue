@@ -6,8 +6,7 @@
       <p>
         Team Leader: {{ userName }} <br>
         Game Experience: {{ level }} <br>
-        Players: {{ players }}  <br>
-        Game Selected: {{ games }}
+        Players Needed: {{ playersNeeded }} 
         </p>
         </div>
   </div>
@@ -26,6 +25,9 @@ export default {
     },
     level() {
       return this.$store.getters.level;
+    },
+    playersNeeded() {
+      return this.$store.getters.playersNeeded;
     }
   }
  
@@ -55,7 +57,7 @@ export default {
 .plyrStat {
   display: block;
   width: 100%;
-  height: 130px;
+  height: 100px;
   color: #fff;
   font-weight: bold;
   font-size: 110%;

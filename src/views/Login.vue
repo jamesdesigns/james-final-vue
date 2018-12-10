@@ -32,6 +32,14 @@
       label="Game Experience Level"
       required
     ></v-select>
+    <!-- NEW -->
+    <v-select
+      v-model="number"
+      :items="amount"
+      :rules="[v => !!v || 'Amount is required']"
+      label="Players Needed"
+      required
+    ></v-select>
     <v-btn
       color="pink lighten-2"  
       :disabled="!valid"
@@ -47,6 +55,7 @@
           <li>Email: {{ email }}</li>
           <li>Password: {{ password }}</li>
           <li>Game Experience: {{ select }}</li>
+          <li>Players Needed: {{ number }}</li>
           </ul>
   </div>
 
@@ -86,6 +95,14 @@
         'Pro',
         'Absolute Dominator'
       ],
+      number: '',  
+      number: null,
+      amount: [
+        '0 - 1',
+        '2 - 5',
+        '5 - 10',
+        '11 +'
+      ],
      
       checkbox: false
     }),
@@ -99,6 +116,7 @@
             email: this.email,
             password: this.password,
             select: this.select,
+            number: this.number,
             checkbox: this.checkbox
 
           })
@@ -114,14 +132,16 @@
               username: this.username,
               email: this.email,
               password: this.password,
-              select: this.select
+              select: this.select,
+              number: this.number
           }
           console.log(formData)
           this.$store.dispatch('userLoggedIn', {
               username: formData.username,
               email: formData.email,
               password: formData.password,
-              select: formData.select
+              select: formData.select,
+              number: formData.number
           })
       }
     }

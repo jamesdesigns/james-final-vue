@@ -26,9 +26,9 @@
           two-line
         >
           <!-- <v-list-tile @click="" v-for="game in allGames" :key="game.title"> -->
-            <v-list-tile v-for="game in allGames" :key="game.title">
+            <v-list-tile v-for="(game, i) in allGames" :key="i">
             <v-list-tile-action>
-              <v-checkbox v-model="selectedGames" value=""></v-checkbox>
+              <v-checkbox v-model="selectedGames" :value="game" :id="game.title"></v-checkbox>
             </v-list-tile-action>
 
           <!-- <v-list-tile-content @click="allGames = !allGames"> -->
@@ -72,14 +72,14 @@ row
           two-line
         >
 
-          <v-list-tile v-for="(a, index) in game" :key="index">
+          <v-list-tile v-for="(player, i) in players" :key="i">
             <v-list-tile-action>
-              <v-checkbox v-model="selectedPlayers"></v-checkbox>
+              <v-checkbox v-model="selectedPlayers" :value="player" :id="player.name"></v-checkbox>
             </v-list-tile-action>
 
             <v-list-tile-content>
-              <v-list-tile-title>{{ a.name }} {{ a.surname }}</v-list-tile-title>
-              <v-list-tile-sub-title>Age: {{ a.age }}  |  Gender:  {{ a.gender }}</v-list-tile-sub-title>
+              <v-list-tile-title>{{ player.name }} {{ player.surname }}</v-list-tile-title>
+              <v-list-tile-sub-title>Age: {{ player.age }}  |  Gender:  {{ player.gender }}</v-list-tile-sub-title>
             </v-list-tile-content>
 
           </v-list-tile>
@@ -97,13 +97,13 @@ row
 
     <v-stepper-content step="3">
       <v-card color="white" class="mb-5">
-        <h3 left>Game(s) Selected:</h3>
+        <h3>Game(s) Selected:</h3>
          <ul>
-          <li v-for="(games, i) in allGames" :key="i">{{ games.title }} | Type: {{ games.setting }} | Published in  {{ games.initial_release_date }}</li>
+          <li v-for="(games, i) in selectedGames" :key="i">{{ games.title }} | Type: {{ games.setting }} | Published in  {{ games.initial_release_date }}</li>
         </ul>
-        <h3 left>Player(s) Selected:</h3>
+        <h3>Player(s) Selected:</h3>
         <ul>
-          <li v-for="(player, i) in game" :key="i">{{ player.name }} {{ player.surname }} | {{ player.age }}</li>
+          <li v-for="(player, i) in selectedPlayers" :key="i">{{ player.name }} {{ player.surname }} | Age: {{ player.age }} | Gender: {{ player.gender }}</li>
         </ul>  
       </v-card>
       <v-btn color="pink lighten-2" @click="e6 = 4">Continue</v-btn>
@@ -135,7 +135,7 @@ export default {
       return {
        allGames: videogames,
        e6: 1,
-       game: [],
+       players: [],
        selectedGames: [],
        selectedPlayers: []
       }
@@ -155,7 +155,7 @@ export default {
          axios
              .get('https://uinames.com/api/?amount=5&ext')
           // .get('https://randomuser.me/api/?inc=gender,name,picture')
-             .then(response => (this.game = response.data))
+             .then(response => (this.players = response.data))
      },
 };
 </script>
@@ -170,6 +170,9 @@ export default {
 h2 {
   color: #5cc1a6;
   margin-bottom: 20px;
+}
+h3 {
+  text-align: left;
 }
 .start {
   margin-left: 35%;

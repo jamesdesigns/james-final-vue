@@ -20,7 +20,8 @@ export default new Vuex.Store({
       username: 'Online Player',
       email: '',
       password: '',
-      select: ''
+      select: '',
+      number: ''
     }
   },
   getters: {
@@ -30,6 +31,9 @@ export default new Vuex.Store({
     level(state){
       return state.user.select
     },
+    playersNeeded(state){
+      return state.user.number
+    }
   },
   mutations: {
     storeUser(state, user){
