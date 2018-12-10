@@ -17,6 +17,7 @@ More Logic: [More Logic](https://github.com/jamesdesigns/james-final-vue/blob/ma
 
 
 ### 2. Code encapsulated as single-file components
+All the code has been encapsulated and reside in single-file components.
 
 ### 3. Code created and managed with real development tools
 This entire application has been created and managed with real development tools such as, Vuetify, axios, vuelidate, vuex, and more. 
