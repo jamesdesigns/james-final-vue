@@ -29,7 +29,7 @@ All my activity can be seen on my main GitHub account.
 ### 5. Component communication
 Used props to communicate a message on the Home.vue page (The message: "Build a Team". Located on the Home page.) from the HelloWorld.vue page. You can view where the props is set up here:
 
-Component Communication: [Component Communication]()
+Component Communication: [Component Communication](https://github.com/jamesdesigns/james-final-vue/blob/master/src/components/HelloWorld.vue)
 
 ### 6. User input form with validation
 For User Input with form validation, I used this for the Login Page of the applicaiton.
