@@ -19,11 +19,6 @@ export default {
   },
   props: {
     msg: String
-  },
-  methods: {
-    sendRequest: function() {
-       alert('Hello ' + this.name + '!')
-    }
   }
 };
 </script>
