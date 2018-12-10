@@ -145,7 +145,6 @@ h2 {
 }
 h3 {
   text-align: left;
-  margin-left: 2.5%;
   color: #f344a5;
 }
 .start {
