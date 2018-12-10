@@ -14,7 +14,7 @@
         </v-img>
         <v-card-title>
             <ul>
-                <li class="headline mb-0">{{ i.name }} {{ i.surname }}</li>
+                <li class="headline mb-0">{{ i.name }}</li>
                 <li>Age: {{ i.age }}
                 <li>Gender: {{ i.gender }}</li>    
             </ul>

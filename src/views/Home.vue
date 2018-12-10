@@ -17,7 +17,6 @@
 
     <v-stepper-content step="1">
      <v-card color="grey lighten-1" class="mb-5"> 
-                      <!-- NEW ADDED -->
 <v-layout row>
     <v-flex xs12>
      <!-- <v-card> -->
@@ -26,12 +25,14 @@
           subheader
           two-line
         >
-          <v-list-tile @click="" v-for="game in allGames" :key="game.title">
+          <!-- <v-list-tile @click="" v-for="game in allGames" :key="game.title"> -->
+            <v-list-tile v-for="game in allGames" :key="game.title">
             <v-list-tile-action>
-              <v-checkbox v-model="selectedGames"></v-checkbox>
+              <v-checkbox v-model="selectedGames" value=""></v-checkbox>
             </v-list-tile-action>
 
-            <v-list-tile-content @click="selectedGames = !selectedGames">
+          <!-- <v-list-tile-content @click="allGames = !allGames"> -->
+            <v-list-tile-content>
               <v-list-tile-title>
                 {{ game.title }}
                 </v-list-tile-title>
@@ -69,18 +70,18 @@ row
         <v-list
           subheader
           two-line
-          v-for="(i, index) in game" :key="index"
         >
 
-          <v-list-tile @click="">
+          <v-list-tile v-for="(a, index) in game" :key="index">
             <v-list-tile-action>
-              <v-checkbox v-model="notifications"></v-checkbox>
+              <v-checkbox v-model="selectedPlayers"></v-checkbox>
             </v-list-tile-action>
 
-            <v-list-tile-content @click="notifications = !notifications">
-              <v-list-tile-title>{{ i.name }}</v-list-tile-title>
-              <v-list-tile-sub-title>Age: {{ i.age }}  |  Gender:  {{ i.gender }}</v-list-tile-sub-title>
+            <v-list-tile-content>
+              <v-list-tile-title>{{ a.name }} {{ a.surname }}</v-list-tile-title>
+              <v-list-tile-sub-title>Age: {{ a.age }}  |  Gender:  {{ a.gender }}</v-list-tile-sub-title>
             </v-list-tile-content>
+
           </v-list-tile>
 
         </v-list>
@@ -95,10 +96,15 @@ row
     <v-stepper-step :complete="e6 > 3" step="3">Send Request</v-stepper-step>
 
     <v-stepper-content step="3">
-      <v-card color="white" class="mb-5" height="150px">
+      <v-card color="white" class="mb-5">
+        <h3 left>Game(s) Selected:</h3>
+         <ul>
+          <li v-for="(games, i) in allGames" :key="i">{{ games.title }} | Type: {{ games.setting }} | Published in  {{ games.initial_release_date }}</li>
+        </ul>
+        <h3 left>Player(s) Selected:</h3>
         <ul>
-          <li v-for="myitem in sendGame">{{ myitem }}</li>
-          </ul>
+          <li v-for="(player, i) in game" :key="i">{{ player.name }} {{ player.surname }} | {{ player.age }}</li>
+        </ul>  
       </v-card>
       <v-btn color="pink lighten-2" @click="e6 = 4">Continue</v-btn>
       <v-btn flat>Cancel</v-btn>
@@ -129,8 +135,9 @@ export default {
       return {
        allGames: videogames,
        e6: 1,
+       game: [],
        selectedGames: [],
-       sendGame: []
+       selectedPlayers: []
       }
     },
   name: "home",
