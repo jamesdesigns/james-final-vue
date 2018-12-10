@@ -1,42 +1,15 @@
 <template>
   <div id="app" class="hello">
-  
-  <!-- <img width="960px" height="300" src="https://media.giphy.com/media/oxU7gskFCKEBixYYR7/giphy.gif" alt="Games" /> -->
   <img width="1330px" height="477px" src="../assets/wow.jpg" alt="Characters from World of Warcraft game" />
-   
     <h1 class="animated bounceIn">{{ msg }}</h1> 
     <p>
       You now have the opportunity to choose the best players to team up with. Choose one of many MMPORG role playing games to play. Select a few players you want to team up with. Get your request approved from other players.
       Then you will form an unstoppable team that will help you dominate your opponents and start winning.
     </p>
-
-
-
     <br>
-<!-- <h3>Drag and Drop</h3>   
-      <div v-drag-and-drop:options="options" class="drag-wrapper">    
-  <ul>
-    <li>Member 1</li>
-    <li>Member 2</li>
-    <li>Member 3</li>
-    <li>Member 4</li>
-    <li>Member 5</li>
-    <li>Member 6</li>
-  </ul>
-  <ul> 
-      <li>Member 7</li>
-      <li>Member 8</li>
-      <li>Member 9</li>
-      <li>Member 10</li>
-      <li>Member 11</li>
-      <li>Member 12</li>
-  </ul>
-</div> -->
-<br>
-<!-- <v-btn color="info" @click="sendRequest">APPROVE</v-btn> -->
+    <br>
   </div>
 </template>
-
 <script>
 export default {
 

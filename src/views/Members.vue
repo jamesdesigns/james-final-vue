@@ -29,7 +29,6 @@
     </v-flex>
   </v-layout>
   </v-container>
-
   </div>
 </template>
 <script>
@@ -41,11 +40,9 @@ export default {
     }
     },
 
-    // New example
     mounted() {
          axios
-             .get('https://uinames.com/api/?amount=5&ext')
-          // .get('https://randomuser.me/api/?inc=gender,name,picture')
+             .get('https://uinames.com/api/?amount=6&ext')
              .then(response => (this.info = response.data))
      },
 }

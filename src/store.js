@@ -4,15 +4,6 @@ import router from "./router";
 
 Vue.use(Vuex);
 
-
-/*
-export default new Vuex.Store({
-  state: {},
-  mutations: {},
-  actions: {}
-});
-*/
-
 // ADD NEW STATE MANAGEMENT
 export default new Vuex.Store({
   state: {
@@ -44,7 +35,6 @@ export default new Vuex.Store({
     userLoggedIn({commit}, user) {
       commit('storeUser', user)
        router.replace('/')
-      // router.replace('App.vue')
       }
     }
   });

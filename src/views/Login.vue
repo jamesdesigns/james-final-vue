@@ -1,7 +1,5 @@
 <template>
 <div class="login">
-
-
  <v-form ref="form" v-model="valid" lazy-validation>
      <h1 class="animated bounceIn">Login Form</h1>
     <v-flex xs12 sm6 offset-sm3>
@@ -32,7 +30,6 @@
       label="Game Experience Level"
       required
     ></v-select>
-    <!-- NEW -->
     <v-select
       v-model="number"
       :items="amount"
@@ -48,8 +45,7 @@
       submit
     </v-btn>
     <v-btn @click="clear">clear</v-btn>
-
-  <div class="verifyInfo">
+    <div class="verifyInfo">
       <ul>
           <li>Username: {{ username }}</li>
           <li>Email: {{ email }}</li>
@@ -57,11 +53,9 @@
           <li>Game Experience: {{ select }}</li>
           <li>Players Needed: {{ number }}</li>
           </ul>
-  </div>
-
+    </div>
     </v-flex>
   </v-form>
-
 </div>
 </template>
 <script>
@@ -118,7 +112,6 @@
             select: this.select,
             number: this.number,
             checkbox: this.checkbox
-
           })
         }
       },

@@ -12,18 +12,14 @@
         </v-tabs>
       </div>
         </v-toolbar>
-
       <transition
         name="fade"
         mode="out-in"
       >
         <router-view/>
-
       </transition>
-
     </v-app>
-
- </div>   
+</div>   
 </template>
 <script>
 export default {
@@ -39,8 +35,5 @@ h1 {
 }
 .menu:hover, .menu:active {
     color: pink;
-}
-#nav {
-   /* margin-top:15px; */
 }
 </style>

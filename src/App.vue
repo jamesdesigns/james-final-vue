@@ -1,14 +1,14 @@
 <template>
   <div id="app">
       <main-header></main-header>
-
-    <div class="plyrStat" v-highlight:background.delayed="'#58bdbb'">
+      <!-- ADD CUSTOM DIRECTIVE (FOOTER) -->
+      <div class="plyrStat" v-highlight:background.delayed="'#58bdbb'">
       <p>
         Team Leader: {{ userName }} <br>
         Game Experience: {{ level }} <br>
         Players Needed: {{ playersNeeded }} 
         </p>
-        </div>
+      </div>
   </div>
 </template>
 <script>
@@ -30,10 +30,8 @@ export default {
       return this.$store.getters.playersNeeded;
     }
   }
- 
 }
 </script>
-
 <style>
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
@@ -67,20 +65,17 @@ export default {
   bottom: 0;
   left: 0;
 }
-
 .plyrStat p {
   margin-left: 2.5%;
   border-left: 3px solid #fff;
   padding-left: 20px;
 }
-
 .fade-enter-active,
 .fade-leave-active {
   transition-duration: 0.3s;
   transition-property: opacity;
   transition-timing-function: ease;
 }
-
 .fade-enter,
 .fade-leave-active {
   opacity: 0
